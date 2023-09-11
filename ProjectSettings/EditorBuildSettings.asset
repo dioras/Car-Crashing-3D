@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: c808c65a2e1e56247a5dc13a2acecd61
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 8cfdd10d0598a6f45a3605591e56f972
+  - enabled: 1
+    path: Assets/StuntPark/StuntPark.unity
+    guid: 9f2f28111e18d304bb44d7d4a8582215
+  - enabled: 1
+    path: Assets/Scenes/Maps/Publish/MapDesertNG.unity
+    guid: 665862980be6dd343ac773c4c40a22c0
+  - enabled: 1
+    path: Assets/Scenes/Maps/Publish/RockParkNG.unity
+    guid: 7059d5c6da0ec254baeef9f32cf41e01
+  - enabled: 1
+    path: Assets/Scenes/Maps/Publish/MapWoodlandsV2NG.unity
+    guid: dc1b4d904afd6e64c9e112705ab27b94
+  - enabled: 1
+    path: Assets/Scenes/Maps/CustomMap.unity
+    guid: 6095cd46f1329cd419ed11660ddf776b
+  - enabled: 1
+    path: Assets/Scenes/LevelEditor.unity
+    guid: 6fd69dc588cd8bb43835a360ba893a59
