@@ -43,13 +43,76 @@ public class StoreListener : IStoreListener
 	public void PurchaseIAP(string product)
 	{
 		UnityEngine.Debug.Log("Purchasing: " + product);
-		if (this.controller == null)
-		{
-			MenuManager.Instance.ShowMessage("Cannot purchase right now. Make sure you are online?", true);
-			return;
-		}
-		this.controller.InitiatePurchase(product);
-	}
+		//if (this.controller == null)
+		//{
+		//	MenuManager.Instance.ShowMessage("Cannot purchase right now. Make sure you are online?", true);
+		//	return;
+		//}
+		//this.controller.InitiatePurchase(product);
+
+        StatsData statsData = GameState.LoadStatsData();
+        int num = 0;
+        bool flag = false;
+        bool flag2 = false;
+        string id = product;
+        switch (id)
+        {
+            case "com.battlecreek.offroadoutlaws.100gold":
+                num = 100;
+                break;
+            case "com.battlecreek.offroadoutlaws.250gold":
+                num = 250;
+                break;
+            case "com.battlecreek.offroadoutlaws.500gold":
+                num = 500;
+                break;
+            case "com.battlecreek.offroadoutlaws.750gold":
+                num = 750;
+                break;
+            case "com.battlecreek.offroadoutlaws.4000gold":
+                num = 4000;
+                break;
+            case "com.battlecreek.offroadoutlaws.10000gold":
+                num = 10000;
+                break;
+            case "com.battlecreek.offroadoutlaws.monthlyvip":
+                num = 200;
+                flag = true;
+                break;
+            case "com.battlecreek.offroadoutlaws.timedvehiclepurchase":
+                flag2 = true;
+                break;
+            case "com.battlecreek.offroadoutlaws.premiumvehiclepurchase":
+                flag2 = true;
+                break;
+        }
+        string text = "Thanks! You now have " + num + " more gold";
+        if (flag)
+        {
+            text += " and are a member";
+        }
+        text += "!";
+        if (!flag2)
+        {
+            MenuManager.Instance.ShowMessage(text, true);
+        }
+        else
+        {
+            MenuManager.Instance.HideMessage();
+            MenuManager.Instance.StopStoreCallbackTimer();
+            MenuManager.Instance.BuyVehicle(Currency.Cash, true);
+        }
+        GameState.AddCurrency(num, Currency.Gold);
+        if (!statsData.IsMember && flag)
+        {
+            GameState.SetMembership(true);
+            MenuManager.Instance.HideBecomeMember();
+            UnityEngine.Debug.Log(MenuManager.Instance.LoadedVehiclesInGarage.Count);
+            UnityEngine.Debug.Log(MenuManager.Instance.SelectedVehicleInGarageID);
+            MenuManager.Instance.LoadMenu(MenuState.MainMenu, true, false);
+        }
+        MenuManager.Instance.UpdateScreen();
+    }
 
 	public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
 	{

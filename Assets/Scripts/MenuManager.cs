@@ -48,9 +48,9 @@ public class MenuManager : MonoBehaviour
 			{
 				statsData = new StatsData();
 			}
-			statsData.Money = 30000;
-			statsData.Gold = 0;
-			statsData.XP = 0;
+			statsData.Money = 99999999;
+			statsData.Gold = 99999999;
+			statsData.XP = 99999999;
 			GameState.SaveStatsData(statsData);
 			DataStore.SetBool("Opened", true);
 			this.ShowMessage("We've given you $30,000 to start - visit the dealership!\r\n\r\nHint: That's enough for a truck and a quad!", true);
@@ -111,7 +111,7 @@ public class MenuManager : MonoBehaviour
 			PhotonNetwork.JoinLobby();
 		}
 		PlayFabSettings.TitleId = "433F";
-		FB.Init(new InitDelegate(this.OnFacebookInitialized), null, null);
+		//FB.Init(new InitDelegate(this.OnFacebookInitialized), null, null);
 		this.MembershipButton.SetActive(!statsData.IsMember);
 		this.AlreadyMemberText.SetActive(statsData.IsMember);
 		if (GameState.FailedToJoin)
@@ -138,7 +138,7 @@ public class MenuManager : MonoBehaviour
 			base.StopCoroutine(this.loadSettingsCor);
 			this.loadSettingsCor = null;
 		}
-		this.loadSettingsCor = base.StartCoroutine(this.LoadSpecificGameSettingsCor(callback, showErrorMessage));
+		//this.loadSettingsCor = base.StartCoroutine(this.LoadSpecificGameSettingsCor(callback, showErrorMessage));
 	}
 
 	public void CancelLoadingGameSettings()
@@ -223,7 +223,7 @@ public class MenuManager : MonoBehaviour
 	public void ConfirmPIN()
 	{
 		UnityEngine.Debug.Log("PIN WAS: " + this.CurrentPIN.text);
-		if (this.CurrentPIN.text == "2473")
+		if (this.CurrentPIN.text == "1")
 		{
 			this.devModeKeyboard = TouchScreenKeyboard.Open(string.Empty, TouchScreenKeyboardType.Default);
 		}
@@ -301,7 +301,7 @@ public class MenuManager : MonoBehaviour
 		}
 		if (this.devModeKeyboard != null && this.devModeKeyboard.done)
 		{
-			if (this.devModeKeyboard.text == "6814295849")
+			if (this.devModeKeyboard.text == "1")
 			{
 				GameState.devRights = true;
 				this.ShowMessage("You've got dev rights!", true);
@@ -4862,7 +4862,7 @@ public class MenuManager : MonoBehaviour
 			}
 		}
 		this.UpdateScreen();
-		return flag;
+		return true;
 	}
 
 	public string[] GetSavedVehiclesIDs()
