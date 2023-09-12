@@ -217,7 +217,8 @@ public class SolidAxleRearSuspension : Suspension
 		{
 			num = this.carController.Steering;
 		}
-		float perFrameRotation = this.wheelColliders[0].wheelCollider.perFrameRotation;
+        if (!wheelColliders[0].wheelCollider) return;
+        float perFrameRotation = this.wheelColliders[0].wheelCollider.perFrameRotation;
 		this.RLWheel.BrakeDisk.Rotate(this.RLWheel.BrakeDisk.right, perFrameRotation, Space.World);
 		Vector3 localPosition = this.RLWheel.Dummy.localPosition;
 		localPosition.z = this.RLWheel.Dummy.parent.InverseTransformPoint(this.wheelColliders[0].GetVisualWheelPosition()).z;

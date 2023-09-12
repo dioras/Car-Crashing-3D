@@ -8,7 +8,7 @@ TerrainLayer:
   m_PrefabAsset: {fileID: 0}
   m_Name: layer_ground_desertSandDuneless_2k_alb_sground_desertSandDuneless_2k_n3d3aba195e4d26ee
   m_DiffuseTexture: {fileID: 2800000, guid: 67119bbf44e4420391a2a69b76c75134, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: e1478418ee1c42a6a39be786f907d8ac, type: 3}
+  m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 15, y: 15}
   m_TileOffset: {x: 0, y: 0}

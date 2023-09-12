@@ -8,7 +8,7 @@ TerrainLayer:
   m_PrefabAsset: {fileID: 0}
   m_Name: layer_MoabCliffRock_GuiMossyRock_2k_n3d1cca0d6d0e9938
   m_DiffuseTexture: {fileID: 2800000, guid: e418a842c4d846ef8544fa2acbfdc2a2, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 648402502a9640ff9e98cf6433a498d8, type: 3}
+  m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 10, y: 10}
   m_TileOffset: {x: 0, y: 0}

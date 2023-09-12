@@ -915,7 +915,7 @@ namespace GeNa
 			}
 			gameObject.transform.parent = this.m_probeParent.transform;
 			LightProbeGroup lightProbeGroup = gameObject.AddComponent<LightProbeGroup>();
-			lightProbeGroup.probePositions = new Vector3[0];
+			//lightProbeGroup.probePositions = new Vector3[0];
 			return lightProbeGroup;
 		}
 

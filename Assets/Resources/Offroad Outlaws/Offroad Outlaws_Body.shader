@@ -181,7 +181,7 @@ OUT_Data_Frag frag(v2f in_f)
         tmpvar_9 = 0;
     }
     float3 tmpvar_10;
-    tmpvar_10 = texCUBE(unity_SpecCube0, in_f.xlv_TEXCOORD3).xyz;
+    tmpvar_10 = UNITY_SAMPLE_TEXCUBE(unity_SpecCube0, in_f.xlv_TEXCOORD3).xyz;
     reflectionColor_1 = tmpvar_10;
     reflectionColor_1 = (reflectionColor_1 * ((((((reflectionColor_1.x * 0.3) + (reflectionColor_1.y * 0.59)) + (reflectionColor_1.z * 0.11)) * _ReflectionStrength) * 2) * (1 - tmpvar_9)));
     float _tmp_dvx_1 = (dirtTex_2.w * tmpvar_9);

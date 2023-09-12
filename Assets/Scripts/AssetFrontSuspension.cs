@@ -201,7 +201,8 @@ public class AssetFrontSuspension : Suspension
 		{
 			num = this.carController.Steering;
 		}
-		float perFrameRotation = this.wheelColliders[0].wheelCollider.perFrameRotation;
+        if (!wheelColliders[0].wheelCollider) return;
+        float perFrameRotation = this.wheelColliders[0].wheelCollider.perFrameRotation;
 		this.FLWheel.BrakeDisk.Rotate(this.FLWheel.BrakeDisk.forward, -perFrameRotation, Space.World);
 		this.FLWheel.Joint.Rotate(0f, 0f, -perFrameRotation);
 		this.FLWheel.Knuckle.localEulerAngles = new Vector3(0f, num + 90f, 0f);

@@ -208,6 +208,7 @@ public class SolidAxleFrontSuspension : Suspension
 		{
 			num = this.carController.Steering;
 		}
+		if (!wheelColliders[0].wheelCollider) return;
 		float perFrameRotation = this.wheelColliders[0].wheelCollider.perFrameRotation;
 		Vector3 localPosition = this.FLWheel.Dummy.localPosition;
 		localPosition.z = this.FLWheel.Dummy.parent.InverseTransformPoint(this.wheelColliders[0].GetVisualWheelPosition()).z;
