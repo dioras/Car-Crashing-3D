@@ -76,13 +76,13 @@ Shader "Custom/SimpleLUT"
       //uniform float4 unity_SHBb;
       //uniform float4 unity_SHC;
       //uniform float4 unity_OcclusionMaskSelector;
-      uniform float4 unity_ProbesOcclusion;
-      uniform float3 unity_LightColor0;
-      uniform float3 unity_LightColor1;
-      uniform float3 unity_LightColor2;
-      uniform float3 unity_LightColor3;
-      uniform float4x4 unity_ShadowSplitSpheres;
-      uniform float4 unity_ShadowSplitSqRadii;
+      //uniform float4 unity_ProbesOcclusion;
+      //uniform float3 unity_LightColor0;
+      //uniform float3 unity_LightColor1;
+      //uniform float3 unity_LightColor2;
+      //uniform float3 unity_LightColor3;
+      //uniform float4x4 unity_ShadowSplitSpheres;
+      //uniform float4 unity_ShadowSplitSqRadii;
       //uniform float4 unity_LightShadowBias;
       //uniform float4 _LightSplitsNear;
       //uniform float4 _LightSplitsFar;
@@ -98,20 +98,20 @@ Shader "Custom/SimpleLUT"
       //uniform float4 unity_AmbientSky;
       //uniform float4 unity_AmbientEquator;
       //uniform float4 unity_AmbientGround;
-      uniform float4 unity_IndirectSpecColor;
+      //uniform float4 unity_IndirectSpecColor;
       //uniform float4x4 UNITY_MATRIX_P;
       //uniform float4x4 unity_MatrixV;
       //uniform float4x4 unity_MatrixInvV;
       //uniform float4x4 unity_MatrixVP;
       //uniform int unity_StereoEyeIndex;
-      uniform float4 unity_ShadowColor;
+      //uniform float4 unity_ShadowColor;
       //uniform float4 unity_FogColor;
       //uniform float4 unity_FogParams;
       // uniform sampler2D unity_Lightmap;
       // uniform sampler2D unity_LightmapInd;
       // uniform sampler2D unity_DynamicLightmap;
-      uniform sampler2D unity_DynamicDirectionality;
-      uniform sampler2D unity_DynamicNormal;
+      //uniform sampler2D unity_DynamicDirectionality;
+      //uniform sampler2D unity_DynamicNormal;
       // uniform float4 unity_LightmapST;
       // uniform float4 unity_DynamicLightmapST;
       //uniform samplerCUBE unity_SpecCube0;
@@ -126,7 +126,7 @@ Shader "Custom/SimpleLUT"
       //uniform float4 unity_SpecCube1_ProbePosition;
       //uniform float4 unity_SpecCube1_HDR;
       //uniform float4 unity_Lightmap_HDR;
-      uniform float4 unity_DynamicLightmap_HDR;
+      //uniform float4 unity_DynamicLightmap_HDR;
       uniform sampler2D _MainTex;
       uniform sampler3D _ClutTex;
       uniform float _Amount;
@@ -175,12 +175,12 @@ Shader "Custom/SimpleLUT"
       {
       }
       
-      struct v2f_vertex_lit
-      {
-          float2 uv;
-          float4 diff;
-          float4 spec;
-      };
+      //struct v2f_vertex_lit
+      //{
+      //    float2 uv;
+      //    float4 diff;
+      //    float4 spec;
+      //};
       
       struct v2f_img
       {
@@ -214,15 +214,15 @@ Shader "Custom/SimpleLUT"
           return UnityObjectToClipPos(pos.xyz);
       }
       
-      v2f vert(in appdata_img v )
-      {
-          OUT_Data_Vert out_v;
-          v2f o;
-          o.pos = UnityObjectToClipPos(v.vertex);
-          o.uv = v.texcoord.xy;
-          //return o;
-          return out_v;
-      }
+      // v2f vert(in appdata_img v )
+      // {
+      //     OUT_Data_Vert out_v;
+      //     v2f o;
+      //     o.pos = UnityObjectToClipPos(v.vertex);
+      //     o.uv = v.texcoord.xy;
+      //     //return o;
+      //     return out_v;
+      // }
       
       OUT_Data_Vert vert(appdata_t in_v)
       {
@@ -231,8 +231,8 @@ Shader "Custom/SimpleLUT"
           unity_MatrixMV = mul(unity_MatrixV, unity_ObjectToWorld);
           unity_MatrixTMV = xll_transpose_mf4x4(unity_MatrixMV);
           unity_MatrixITMV = xll_transpose_mf4x4(mul(unity_WorldToObject, unity_MatrixInvV));
-          v2f xl_retval;
-          appdata_img xlt_v;
+        //  v2f xl_retval;
+         // appdata_img xlt_v;
           xlt_v.vertex = float4(in_v.vertex);
           xlt_v.texcoord = float2(in_v.texcoord.xy);
           xl_retval = vert(xlt_v);
@@ -392,7 +392,7 @@ Shader "Custom/SimpleLUT"
       //uniform float4 unity_SHBb;
       //uniform float4 unity_SHC;
       //uniform float4 unity_OcclusionMaskSelector;
-      uniform float4 unity_ProbesOcclusion;
+      //uniform float4 unity_ProbesOcclusion;
       uniform float3 unity_LightColor0;
       uniform float3 unity_LightColor1;
       uniform float3 unity_LightColor2;
@@ -442,7 +442,7 @@ Shader "Custom/SimpleLUT"
       //uniform float4 unity_SpecCube1_ProbePosition;
       //uniform float4 unity_SpecCube1_HDR;
       //uniform float4 unity_Lightmap_HDR;
-      uniform float4 unity_DynamicLightmap_HDR;
+      //uniform float4 unity_DynamicLightmap_HDR;
       uniform sampler2D _MainTex;
       uniform sampler3D _ClutTex;
       uniform float _Amount;

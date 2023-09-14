@@ -844,7 +844,7 @@ public class SurfaceManager : MonoBehaviour
 					if (!this.MudTerrains[i].LODS_Baked)
 					{
 						this.MudTerrains[i].LODS_Baked = true;
-						this.MudTerrains[i].terrain.ApplyDelayedHeightmapModification();
+						this.MudTerrains[i].terrainData.SyncHeightmap();
 					}
 				}
 			}

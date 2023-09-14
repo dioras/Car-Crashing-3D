@@ -9,34 +9,34 @@ public class MudTerrain : MonoBehaviour
 		this.DefaultHeights = this.terrainData.GetHeights(0, 0, this.hRes, this.hRes);
 	}
 
-	[HideInInspector]
+	//[HideInInspector]
 	public Terrain terrain;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public TerrainData terrainData;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public Texture2D[] textures;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public int hRes;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public int aRes;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public Rect terRect;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public float[,] DefaultHeights;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public float[,,] DefaultAlphaMap;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public bool LODS_Baked;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public float DeformableMaterialMaxDepth;
 
 	public float drag;
