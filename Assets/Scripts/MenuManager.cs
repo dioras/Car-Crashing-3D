@@ -3729,7 +3729,7 @@ public class MenuManager : MonoBehaviour
 		this.TrailSelectorScreen.SetActive(this.menuState == MenuState.TrailSelectorScreen);
 		this.TrailRaceBetScreen.SetActive(this.menuState == MenuState.TrailRaceBetScreen);
 		this.communityMapsScreen.SetActive(this.menuState == MenuState.CommunityMaps);
-		this.communityMapsButton.SetActive(GameState.GameType != GameType.CaptureTheFlag);
+		//this.communityMapsButton.SetActive(GameState.GameType != GameType.CaptureTheFlag);
 		this.dronesMenu.SetActive(this.menuState == MenuState.Drones);
 		this.UpdateStats();
 	}
@@ -5124,7 +5124,7 @@ public class MenuManager : MonoBehaviour
 
 	public Text FieldFindParts2;
 
-	public GameObject communityMapsButton;
+	//public GameObject communityMapsButton;
 
 	private bool storeCallbackTimerCounting;
 
