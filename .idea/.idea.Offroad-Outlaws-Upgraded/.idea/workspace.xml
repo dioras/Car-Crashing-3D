@@ -5,90 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81dfcfc6-4007-4218-82d1-b36c0a98d899" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/OOBanner.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/OOBanner.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/OOBannerSkinny.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/OOBannerSkinny.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ramps_Opaque.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ramps_Opaque.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/sounds/ATV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/sounds/ATV.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/turnkeyvehicles/C10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/turnkeyvehicles/C10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/turnkeyvehicles/Wagoneer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/turnkeyvehicles/Wagoneer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/4Runner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/4Runner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/AM.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/AM.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike7.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bronco.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bronco.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bug.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bug.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/C10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/C10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Car0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Car0.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Car1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Car1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Car2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Car2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Car3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Car3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Car5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Car5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/DragATV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/DragATV.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/ElCamino.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/ElCamino.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Ford150.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Ford150.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Mustang.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Mustang.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Nova.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Nova.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/PolarisUTV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/PolarisUTV.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/PowerWagon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/PowerWagon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/RipSaw.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/RipSaw.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Shaman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Shaman.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Silverado2016.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Silverado2016.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Silverado85.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Silverado85.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Wagoneer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Wagoneer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/YFZ1000RUTV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/YFZ1000RUTV.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/YamahaYRZ450R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/YamahaYRZ450R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNG.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNG.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNG/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNG/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNG/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNG/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNGSettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapDesertNGSettings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NG.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NG.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NG/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NG/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NGSettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NGSettings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NG_Profiles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NG_Profiles/Main Camera Profile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/MapWoodlandsV2NG_Profiles/Main Camera Profile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/RockParkNG.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/RockParkNG.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/RockParkNG.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/RockParkNG/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/RockParkNG/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/RockParkNGSettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Maps/Publish/RockParkNGSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Offroad-Outlaws-Upgraded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Offroad-Outlaws-Upgraded/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ATVTemp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ATVTemp.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StuntPark.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StuntPark/StuntPark.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StuntPark/StuntPark.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StuntPark/StuntPark.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StuntPark/StuntPark/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StuntPark/StuntPark/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StuntPark/StuntParkSettings.lighting" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StuntPark/StuntParkSettings.lighting.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/car crashing 3d logo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/car crashing 3d logo.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/desert icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/desert icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/MapWoodlandsV2NG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Publish/MapWoodlandsV2NG.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarUIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarUIControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +21,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/eren/Documents/Unity/Offroad-Outlaws-Upgraded/Assets/Resources/ATVTemp.prefab" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -179,13 +106,14 @@
       <workItem from="1694782500654" duration="2350000" />
       <workItem from="1694791578843" duration="64000" />
       <workItem from="1694791706077" duration="46000" />
-      <workItem from="1695040461471" duration="560000" />
+      <workItem from="1695040461471" duration="7012000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">

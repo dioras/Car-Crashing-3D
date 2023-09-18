@@ -1,10 +1,11 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using CustomVP;
-using ExitGames.Client.Photon;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class CarUIControl : MonoBehaviour
 {
@@ -160,6 +161,8 @@ public class CarUIControl : MonoBehaviour
 			this.DirectionalArrowsPool.Add(UnityEngine.Object.Instantiate<Image>(this.DirectionalArrow, this.DirectionalArrow.transform.parent));
 			this.DirectionalArrowsPool[k].gameObject.SetActive(false);
 		}
+		
+		Advertisements.Instance.ShowInterstitial();
 	}
 
 	private void OnValidate()
@@ -204,6 +207,8 @@ public class CarUIControl : MonoBehaviour
 
 	private void Update()
 	{
+		UpdateAdsTimer();
+
 		Color color = this.NotificationText.color;
 		color.a = Mathf.MoveTowards(color.a, 0f, Time.deltaTime);
 		if (this.notificationBlinking && color.a == 0f)
@@ -307,6 +312,26 @@ public class CarUIControl : MonoBehaviour
 		}
 	}
 
+	private void UpdateAdsTimer()
+	{
+		adsTimer += Time.deltaTime;
+
+		if (adsTimer >= asdInterval && !isAdsPanelOpened)
+		{
+			tempCameraMode = CameraController.Instance.cameraMode;
+			CameraController.Instance.cameraMode = CameraController.CameraMode.Side;
+			refuelPanel.SetActive(true);
+			isAdsPanelOpened = true;
+		}
+	}
+
+	public void ShowInterstitial()
+	{
+		adsTimer = 0;
+		isAdsPanelOpened = false;
+		Advertisements.Instance.ShowInterstitial();
+		CameraController.Instance.cameraMode = tempCameraMode;
+	}
 	public PlayerInfoUI CreatePlayerInfoBox(PhotonView v)
 	{
 		Hashtable customProperties = v.owner.CustomProperties;
@@ -1193,6 +1218,13 @@ public class CarUIControl : MonoBehaviour
 		this.MainGauge.SetActive(!this.MainGauge.activeInHierarchy);
 		this.HideGaugeImage.transform.rotation = Quaternion.Euler(0f, 0f, -this.HideGaugeImage.transform.rotation.eulerAngles.z);
 	}
+
+	[Header("Refuel Ads")]
+	public float adsTimer;
+	public float asdInterval;
+	public GameObject refuelPanel;
+	private CameraController.CameraMode tempCameraMode;
+	private bool isAdsPanelOpened;
 
 	public CarUIControl.ControlType controlType;
 

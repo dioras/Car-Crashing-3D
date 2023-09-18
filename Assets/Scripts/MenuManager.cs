@@ -129,6 +129,8 @@ public class MenuManager : MonoBehaviour
 		{
 			this.LoadSpecificGameSettings(null, false);
 		}
+		
+		if(Time.time > 10) 	Advertisements.Instance.ShowInterstitial();
 	}
 
 	private void LoadSpecificGameSettings(Action callback, bool showErrorMessage)
@@ -202,6 +204,8 @@ public class MenuManager : MonoBehaviour
 		{
 			UnityEngine.Debug.Log("Already initialized");
 		}
+		
+		Advertisements.Instance.Initialize();
 	}
 
 	public void OpenURL(string url)
