@@ -13697,6 +13697,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869bc5071460426ddbde5f399ab25e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  watchedAdCount: 0
+  adCountToWatch: 3
+  IsBoughtWithads: 1
   vehicleType: 2
   MoneyPrice: 15000
   GoldPrice: 75

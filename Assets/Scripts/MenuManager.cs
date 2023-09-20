@@ -1101,6 +1101,23 @@ public class MenuManager : MonoBehaviour
 	{
 		this.BuyVehicleForRealCash();
 	}
+	
+	public void BuyVehicleForAds()
+	{
+		Advertisements.Instance.ShowRewardedVideo(RewardedCompleteMethod);
+	}
+
+	private void RewardedCompleteMethod(bool isCompleted)
+	{
+		if (isCompleted)
+		{
+			this.BuyVehicle(global::Currency.Ads);
+		}
+		else
+		{
+			print("rewarded is " + isCompleted);
+		}
+	}
 
 	public void Wash()
 	{
@@ -4112,11 +4129,23 @@ public class MenuManager : MonoBehaviour
 			this.TruckPriceMoney.text = component.MoneyPrice.ToString();
 			this.TruckPriceGold.text = component.GoldPrice.ToString();
 			this.TruckPriceCash.text = "$" + component.CashPrice.ToString();
-			if (component.IsAvailable)
+			if (component.IsBoughtWithads)
+			{
+				this.BuyForGoldButton.SetActive(false);
+				this.BuyForMoneyButton.SetActive(true);
+				this.BuyForAdsButton.SetActive(true);
+				this.BuyForCashButton.SetActive(false);
+				this.MembersOnlyPanel.SetActive(false);
+				this.PremiumPanel.SetActive(false);
+				this.ExclusivePanel.SetActive(false);
+				this.MembersAndEveryoneElseAfterDatePanel.SetActive(false);
+			}
+			else if (component.IsAvailable)
 			{
 				this.BuyForGoldButton.SetActive(true);
 				this.BuyForMoneyButton.SetActive(true);
 				this.BuyForCashButton.SetActive(false);
+				this.BuyForAdsButton.SetActive(false);
 				this.MembersOnlyPanel.SetActive(false);
 				this.PremiumPanel.SetActive(false);
 				this.ExclusivePanel.SetActive(false);
@@ -4127,6 +4156,7 @@ public class MenuManager : MonoBehaviour
 				this.BuyForGoldButton.SetActive(false);
 				this.BuyForMoneyButton.SetActive(false);
 				this.BuyForCashButton.SetActive(true);
+                this.BuyForAdsButton.SetActive(false);
 				this.MembersOnlyPanel.SetActive(false);
 				this.ExclusivePanel.SetActive(false);
 				this.MembersAndEveryoneElseAfterDatePanel.SetActive(true);
@@ -4157,12 +4187,14 @@ public class MenuManager : MonoBehaviour
 			{
 				this.BuyForGoldButton.SetActive(false);
 				this.BuyForMoneyButton.SetActive(false);
+				this.BuyForAdsButton.SetActive(false);
 				this.BuyForCashButton.SetActive(false);
 				this.MembersOnlyPanel.SetActive(true);
 				this.ExclusivePanel.SetActive(true);
 				this.PremiumPanel.SetActive(false);
 				this.MembersAndEveryoneElseAfterDatePanel.SetActive(false);
 			}
+			
 			if (this.SelectedArray == this.TurnKeyVehicles)
 			{
 				this.BuyForGoldButton.SetActive(false);
@@ -4844,6 +4876,8 @@ public class MenuManager : MonoBehaviour
 
 	private bool ProcessPurchase(global::Currency currency, int amount)
 	{
+		if (currency == Currency.Ads) return true;
+		
 		StatsData statsData = GameState.LoadStatsData();
 		bool flag = false;
 		if (currency != global::Currency.Gold)
@@ -5167,6 +5201,7 @@ public class MenuManager : MonoBehaviour
 	public GameObject BuyForMoneyButton;
 
 	public GameObject BuyForCashButton;
+	public GameObject BuyForAdsButton;
 
 	public GameObject MembersOnlyPanel;
 

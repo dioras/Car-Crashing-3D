@@ -6,17 +6,44 @@
   <component name="ChangeListManager">
     <list default="true" id="81dfcfc6-4007-4218-82d1-b36c0a98d899" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Offroad-Outlaws-Upgraded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Offroad-Outlaws-Upgraded/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ATVTemp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ATVTemp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ramps_cleanup-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Ramps_cleanup-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshs/Banner1_2721_59.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshs/Banner1_2721_59.obj.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bike4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Car0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Car0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Car2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Car2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Car3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Car3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Crawler4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/DragATV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/DragATV.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Trailer1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Trailer1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/YFZ1000RUTV.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/YFZ1000RUTV.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/MapDesertNG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Publish/MapDesertNG.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/MapWoodlandsV2NG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Publish/MapWoodlandsV2NG.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/RockParkNG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Publish/RockParkNG.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/StuntPark.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Publish/StuntPark.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarUIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarUIControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Currency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Currency.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/StuntTerrain 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/StuntTerrain 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/car crashing 3d logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/car crashing 3d logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,33 +57,36 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2VQyE6mMASGBi3axPxbnkpbZckm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Notification.DisplayName-DoNotAsk-Unity project open": "Unity project open",
-    "Notification.DoNotAsk-Unity project open": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Unity project open&quot;: &quot;Unity project open&quot;,
+    &quot;Notification.DoNotAsk-Unity project open&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/eren/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/Users/eren/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/Users/eren/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/eren/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/eren/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/eren/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/MacOS/Unity" />
@@ -106,7 +136,9 @@
       <workItem from="1694782500654" duration="2350000" />
       <workItem from="1694791578843" duration="64000" />
       <workItem from="1694791706077" duration="46000" />
-      <workItem from="1695040461471" duration="7012000" />
+      <workItem from="1695040461471" duration="7278000" />
+      <workItem from="1695138271697" duration="4258000" />
+      <workItem from="1695200817001" duration="11839000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using CustomVP;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VehicleDataManager : MonoBehaviour
 {
@@ -181,6 +182,14 @@ public class VehicleDataManager : MonoBehaviour
 		this.menuManager = MenuManager.Instance;
 	}
 
+	private void CompleteMethod(bool isCompleted)
+	{
+		if (!isCompleted)
+		{
+			watchedAdCount++;
+		}
+	}
+
 	public VehicleData GetVehicleData()
 	{
 		VehicleData vehicleData = new VehicleData();
@@ -286,6 +295,11 @@ public class VehicleDataManager : MonoBehaviour
 			this.lastTapTime = Time.time;
 		}
 	}
+
+	[Header("Ads")] 
+	public int watchedAdCount;
+	public int adCountToWatch = 3;
+	public bool IsBoughtWithads;
 
 	public VehicleType vehicleType;
 

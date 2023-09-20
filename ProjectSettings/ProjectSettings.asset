@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: mbfizizi
-  productName: Offroad Outlawz
+  productName: Car Crashing 3D
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -156,7 +156,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.mbfizizi.OffroadOutlawz
+    Android: com.carcrash.CarCrashingGames
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -281,7 +281,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 85f1143023ec48939377467b62c709a2, type: 3}
+      m_Icon: {fileID: 2800000, guid: c262713d0d0814c8b9ab90cc623bf25a, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

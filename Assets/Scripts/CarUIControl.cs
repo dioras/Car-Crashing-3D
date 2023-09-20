@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using CustomVP;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
@@ -316,7 +317,7 @@ public class CarUIControl : MonoBehaviour
 	{
 		adsTimer += Time.deltaTime;
 
-		if (adsTimer >= asdInterval && !isAdsPanelOpened)
+		if (adsTimer >= adsInterval && !isAdsPanelOpened)
 		{
 			tempCameraMode = CameraController.Instance.cameraMode;
 			CameraController.Instance.cameraMode = CameraController.CameraMode.Side;
@@ -1221,7 +1222,7 @@ public class CarUIControl : MonoBehaviour
 
 	[Header("Refuel Ads")]
 	public float adsTimer;
-	public float asdInterval;
+	public float adsInterval = 150;
 	public GameObject refuelPanel;
 	private CameraController.CameraMode tempCameraMode;
 	private bool isAdsPanelOpened;
