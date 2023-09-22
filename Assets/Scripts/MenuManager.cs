@@ -675,11 +675,6 @@ public class MenuManager : MonoBehaviour
 		{
 			text2 = "On";
 		}
-		this.postFxStatusText.text = text2;
-		if (FastMobileBloom.Instance != null)
-		{
-			FastMobileBloom.Instance.enabled = DataStore.GetBool("PostFX", true);
-		}
 		if (SimpleLUT.Instance != null)
 		{
 			SimpleLUT.Instance.enabled = DataStore.GetBool("PostFX", true);

@@ -28017,7 +28017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllRenderers: []
-  BodyColor: {r: 0.3019608, g: 0.4588236, b: 0.2941177, a: 1}
+  BodyColor: {r: 0.3019608, g: 0.45882353, b: 0.29411766, a: 1}
   GlossyPaint: 0
   GlossyPaintPurchased: 0
   noPaintAllowed: 0

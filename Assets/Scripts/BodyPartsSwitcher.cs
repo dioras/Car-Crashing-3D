@@ -182,6 +182,7 @@ public class BodyPartsSwitcher : MonoBehaviour
 			}
 			this.UpdateDirtiness();
 		}
+		//print(MeshesMerged);
 	}
 
 	public void UpdateDirtiness()
@@ -209,10 +210,12 @@ public class BodyPartsSwitcher : MonoBehaviour
 		if (this.MeshesMerged)
 		{
 			this.UpdateBodyColorMerged();
+			Debug.Log("Merged", gameObject);
 		}
 		else
 		{
 			this.UpdateBodyColorUnmerged();
+			Debug.Log("UnMerged", gameObject);
 		}
 		this.GenerateRimsTexture();
 	}
