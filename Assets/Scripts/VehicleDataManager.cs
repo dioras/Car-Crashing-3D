@@ -182,14 +182,6 @@ public class VehicleDataManager : MonoBehaviour
 		this.menuManager = MenuManager.Instance;
 	}
 
-	private void CompleteMethod(bool isCompleted)
-	{
-		if (!isCompleted)
-		{
-			watchedAdCount++;
-		}
-	}
-
 	public VehicleData GetVehicleData()
 	{
 		VehicleData vehicleData = new VehicleData();
@@ -297,7 +289,7 @@ public class VehicleDataManager : MonoBehaviour
 	}
 
 	[Header("Ads")] 
-	public int watchedAdCount;
+	public int watchedAdCount = 0;
 	public int adCountToWatch = 3;
 	public bool IsBoughtWithads;
 

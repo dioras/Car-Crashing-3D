@@ -1513,26 +1513,26 @@ if (UnityEngine.Input.touchCount == 0)
 		[Range(0f, 4f)]
 		public int BlowerStage;
 
-		[Range(0f, 1f)]
+		//[Range(0f, 1f)]
 		public int DieselStage = 3;
 
 		public int PurchasedTurboStage;
 
 		public int PurchasedBlowerStage;
 
-		[HideInInspector]
+		//[HideInInspector]
 		public bool ManualTransmissionPurchased;
 
-		[HideInInspector]
+		//[HideInInspector]
 		public bool DieselPurchased;
 
-		[HideInInspector]
+		//[HideInInspector]
 		public bool TankTracksPurchased;
 
-		[HideInInspector]
+		//[HideInInspector]
 		public bool frontDuallyPurchased;
 
-		[HideInInspector]
+		//[HideInInspector]
 		public bool rearDuallyPurchased;
 
 		public TransmissionType transmissionType;

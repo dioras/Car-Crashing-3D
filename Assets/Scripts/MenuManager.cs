@@ -8,6 +8,7 @@ using PlayFab.ClientModels;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UpgradeScripts;
 
 public class MenuManager : MonoBehaviour
 {
@@ -48,9 +49,9 @@ public class MenuManager : MonoBehaviour
 			{
 				statsData = new StatsData();
 			}
-			statsData.Money = 99999999;
-			statsData.Gold = 99999999;
-			statsData.XP = 99999999;
+			statsData.Money = 30000;
+			statsData.Gold = 0;
+			statsData.XP = 0;
 			GameState.SaveStatsData(statsData);
 			DataStore.SetBool("Opened", true);
 			this.ShowMessage("We've given you $30,000 to start - visit the dealership!\r\n\r\nHint: That's enough for a truck and a quad!", true);
@@ -1109,9 +1110,19 @@ public class MenuManager : MonoBehaviour
 
 	private void RewardedCompleteMethod(bool isCompleted)
 	{
-		if (isCompleted)
+		if (!isCompleted)
 		{
-			this.BuyVehicle(global::Currency.Ads);
+			var component = this.LoadedVehicleInSelector.GetComponent<VehicleDataManager>();
+			if (component == null) return;
+			
+			SetAdData(component);
+			
+			if (SaveAdData.Instance.GetValue(component.gameObject.name) >= component.adCountToWatch)
+			{
+				this.BuyVehicle(global::Currency.Ads);
+				
+				SaveAdData.Instance.ResetKey(component.gameObject.name);
+			}
 		}
 		else
 		{
@@ -1359,7 +1370,7 @@ public class MenuManager : MonoBehaviour
 
 	public void BuyGlossy()
 	{
-		this.BuyGlossyPaint(global::Currency.Gold);
+		this.BuyGlossyPaint(global::Currency.Ads);
 	}
 
 	public void ToggleBodyColorBar()
@@ -1475,6 +1486,10 @@ public class MenuManager : MonoBehaviour
 	{
 		this.UpgradePowerPart(global::Currency.Gold);
 	}
+	public void UpgradePowerAds()
+	{
+		this.UpgradePowerPart(global::Currency.Ads);
+	}
 
 	public void Drivetrain_SwitchSuspension()
 	{
@@ -1587,6 +1602,10 @@ public class MenuManager : MonoBehaviour
 	{
 		this.InstallChosenSuspension(global::Currency.Money);
 	}
+	public void InstallSuspensionAds()
+	{
+		this.InstallChosenSuspension(global::Currency.Ads);
+	}
 
 	public void InstallSuspensionGold()
 	{
@@ -1596,6 +1615,10 @@ public class MenuManager : MonoBehaviour
 	public void UpgradeSuspension()
 	{
 		this.UpgradeSelectedSuspension(global::Currency.Money);
+	}
+	public void UpgradeSuspensionAds()
+	{
+		this.UpgradeSelectedSuspension(global::Currency.Ads);
 	}
 
 	public void UpgradeSuspensionGold()
@@ -1611,6 +1634,10 @@ public class MenuManager : MonoBehaviour
 	public void UpgradeWheels()
 	{
 		this.UpgradeSelectedWheels(global::Currency.Money);
+	}
+	public void UpgradeWheelsAds()
+	{
+		this.UpgradeSelectedWheels(global::Currency.Ads);
 	}
 
 	public void UpgradeWheelsGold()
@@ -2119,7 +2146,7 @@ public class MenuManager : MonoBehaviour
 
 	public void BuyDuallies()
 	{
-		if (this.ProcessPurchase(global::Currency.Gold, 50))
+		if (this.ProcessPurchase(global::Currency.Ads, 50))
 		{
 			if (this.currentSide == Side.Front)
 			{
@@ -4139,6 +4166,7 @@ public class MenuManager : MonoBehaviour
 				this.PremiumPanel.SetActive(false);
 				this.ExclusivePanel.SetActive(false);
 				this.MembersAndEveryoneElseAfterDatePanel.SetActive(false);
+				GetAdData(component);
 			}
 			else if (component.IsAvailable)
 			{
@@ -4218,6 +4246,19 @@ public class MenuManager : MonoBehaviour
 			}
 			this.UpdateCameraSettings(this.LoadedVehicleInSelector);
 		}
+	}
+
+	private void SetAdData(VehicleDataManager component)
+	{
+		SaveAdData.Instance.SetKey(component.gameObject.name, component.adCountToWatch);
+		var temp = SaveAdData.Instance.GetValue(component.gameObject.name);
+		this.TruckPriceAds.text = temp + " / " + component.adCountToWatch;
+	}
+
+	private void GetAdData(VehicleDataManager component)
+	{
+		var temp = SaveAdData.Instance.GetValue(component.gameObject.name);
+		this.TruckPriceAds.text = temp + " / " + component.adCountToWatch;
 	}
 
 	private void BuyVehicleForRealCash()
@@ -4900,7 +4941,7 @@ public class MenuManager : MonoBehaviour
 			}
 		}
 		this.UpdateScreen();
-		return true;
+		return flag;
 	}
 
 	public string[] GetSavedVehiclesIDs()
@@ -5119,9 +5160,35 @@ public class MenuManager : MonoBehaviour
 		yield break;
 	}
 
+	public void RequestAdForDuallyTires()
+	{
+		Advertisements.Instance.ShowRewardedVideo(DuallyAdsCompleted);
+	}
+
+	private void DuallyAdsCompleted(bool isCompleleted)
+	{
+		if (!isCompleleted)
+		{
+			BuyDuallies();
+		}
+	}
+	
+	public void RequestAdForGlossyPaint()
+	{
+		Advertisements.Instance.ShowRewardedVideo(GlossyAdsCompleted);
+	}
+
+	private void GlossyAdsCompleted(bool isCompleleted)
+	{
+		if (!isCompleleted)
+		{
+			BuyGlossy();
+		}
+	}
+	
 	public static MenuManager Instance;
 
-	private MenuState menuState;
+	public MenuState menuState;
 
 	private VehicleType SelectedVehicleType;
 
@@ -5195,6 +5262,8 @@ public class MenuManager : MonoBehaviour
 	public Text TruckPriceGold;
 
 	public Text TruckPriceCash;
+	
+	public Text TruckPriceAds;
 
 	public GameObject BuyForGoldButton;
 
@@ -5326,7 +5395,7 @@ public class MenuManager : MonoBehaviour
 
 	private int SelectedPartID;
 
-	private WheelsControls SelectedWheelsControls;
+	internal WheelsControls SelectedWheelsControls { get; private set; }
 
 	private int SelectedRimID;
 
@@ -5457,9 +5526,9 @@ public class MenuManager : MonoBehaviour
 
 	private PowerPartType SelectedPowerPartType;
 
-	private PowerPartType SelectedSubPowerPartType;
+	internal PowerPartType SelectedSubPowerPartType { get; private set; }
 
-	private int CurrentPowerPartStage;
+	internal int CurrentPowerPartStage { get; private set; }
 
 	[Header("Drivetrain")]
 	public Text SuspensionSideText;
@@ -5528,7 +5597,7 @@ public class MenuManager : MonoBehaviour
 
 	private int SelectedSuspensionID;
 
-	private Suspension SelectedSuspension;
+	internal Suspension SelectedSuspension { get; private set; }
 
 	[Header("Dyno")]
 	public Button BuyTuningPackButton;
@@ -5669,11 +5738,11 @@ public class MenuManager : MonoBehaviour
 
 	public VehicleDataManager CurrentVehicle;
 
-	private BodyPartsSwitcher CurrentPartsSwitcher;
+	internal BodyPartsSwitcher CurrentPartsSwitcher { get; private set; }
 
-	private CarController CurrentCarController;
+	internal CarController CurrentCarController { get; private set; }
 
-	private SuspensionController CurrentSuspensionController;
+	internal SuspensionController CurrentSuspensionController { get; private set; }
 
 	public List<VehicleDataManager> LoadedVehiclesInGarage = new List<VehicleDataManager>();
 
