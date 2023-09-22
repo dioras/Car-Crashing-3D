@@ -152,7 +152,7 @@ namespace UpgradeScripts
 
         private void RewardedCompleteMethod(bool isCompleted)
         {
-	        if (isCompleted) return;
+	        if (!isCompleted) return;
 	        
 	        switch (_menuManager.menuState)
 	        {

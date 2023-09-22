@@ -315,9 +315,8 @@ public class CarUIControl : MonoBehaviour
 
 	private void UpdateAdsTimer()
 	{
-		adsTimer += Time.deltaTime;
 
-		if (adsTimer >= adsInterval && !isAdsPanelOpened)
+		if (fuelAmountCurrent <= 1)
 		{
 			tempCameraMode = CameraController.Instance.cameraMode;
 			CameraController.Instance.cameraMode = CameraController.CameraMode.Side;
@@ -328,7 +327,7 @@ public class CarUIControl : MonoBehaviour
 
 	public void ShowInterstitial()
 	{
-		adsTimer = 0;
+		fuelAmountCurrent = fuelAmountMax;
 		isAdsPanelOpened = false;
 		Advertisements.Instance.ShowInterstitial();
 		CameraController.Instance.cameraMode = tempCameraMode;
@@ -506,6 +505,8 @@ public class CarUIControl : MonoBehaviour
 		this.HPBar.fillAmount = this.carController.CarHealth / 100f;
 		this.InclinometerBG.localPosition = new Vector3(0f, Mathf.LerpUnclamped(-30f, 0f, this.carController.LongTilt + 1f), 0f);
 		this.InclinometerHolder.eulerAngles = new Vector3(0f, 0f, Mathf.LerpUnclamped(-90f, 0f, this.carController.LatTilt + 1f));
+		
+		UpdateFuel();
 	}
 
 	public void LockboxCountdown(float timeLeft)
@@ -680,6 +681,16 @@ public class CarUIControl : MonoBehaviour
 	public void UpdateThermometer(float TemperatureRatio)
 	{
 		this.TemperatureArrow.eulerAngles = new Vector3(0f, 0f, Mathf.Lerp(this.ThermometerMinAngle, this.ThermometerMaxAngle, TemperatureRatio));
+	}
+	public void UpdateFuel()
+	{
+		float fuelConsumption = Mathf.Abs(carController.CurrentTorque / carController.LeveledMaxTorque) * Time.deltaTime / carFuelConsumption;
+
+		fuelAmountCurrent -= fuelConsumption;
+
+		var fuelRatio = Mathf.Clamp01(fuelAmountCurrent / fuelAmountMax);
+		
+		this.FuelArrow.eulerAngles = new Vector3(0f, 0f, Mathf.Lerp(this.FuelMinAngle, this.FuelMaxAngle, fuelRatio));
 	}
 
 	public void UpdateWinchUsedText(int WinchUsedTimes)
@@ -1359,6 +1370,17 @@ public class CarUIControl : MonoBehaviour
 	public float ThermometerMaxAngle;
 
 	public RectTransform TemperatureArrow;
+	
+	public RectTransform FuelArrow;
+
+	public float FuelMinAngle = -54;
+
+	public float FuelMaxAngle = -112;
+
+	public float fuelAmountCurrent = 100;
+	public float fuelAmountMax = 100;
+	public float carFuelConsumption = 20;
+	
 
 	[Space(10f)]
 	public Image HPBar;

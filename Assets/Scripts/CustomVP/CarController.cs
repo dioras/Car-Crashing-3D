@@ -1665,7 +1665,7 @@ if (UnityEngine.Input.touchCount == 0)
 		[HideInInspector]
 		public float ExtremeBraking;
 
-		[HideInInspector]
+		//[HideInInspector]
 		public float Throttle;
 
 		[HideInInspector]
@@ -1688,7 +1688,7 @@ if (UnityEngine.Input.touchCount == 0)
 
 		private float nextSurfaceManagerDataUpdateTime;
 
-		[HideInInspector]
+		//[HideInInspector]
 		public float FakeRPM;
 
 		private bool HasSnorkel;

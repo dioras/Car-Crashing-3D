@@ -1110,7 +1110,7 @@ public class MenuManager : MonoBehaviour
 
 	private void RewardedCompleteMethod(bool isCompleted)
 	{
-		if (!isCompleted)
+		if (isCompleted)
 		{
 			var component = this.LoadedVehicleInSelector.GetComponent<VehicleDataManager>();
 			if (component == null) return;
@@ -5167,7 +5167,7 @@ public class MenuManager : MonoBehaviour
 
 	private void DuallyAdsCompleted(bool isCompleleted)
 	{
-		if (!isCompleleted)
+		if (isCompleleted)
 		{
 			BuyDuallies();
 		}
@@ -5180,7 +5180,7 @@ public class MenuManager : MonoBehaviour
 
 	private void GlossyAdsCompleted(bool isCompleleted)
 	{
-		if (!isCompleleted)
+		if (isCompleleted)
 		{
 			BuyGlossy();
 		}
