@@ -13698,7 +13698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watchedAdCount: 0
-  adCountToWatch: 3
+  adCountToWatch: 2
   IsBoughtWithads: 1
   vehicleType: 2
   MoneyPrice: 15000

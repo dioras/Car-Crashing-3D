@@ -944,9 +944,9 @@ public class MenuManager : MonoBehaviour
 	public void LoadScene(string sceneName)
 	{
 		StatsData statsData = GameState.LoadStatsData();
-		if (sceneName == "MapDesertNG" && statsData.XP < this.UnlockDesertXP && !DataStore.GetBool(sceneName + "Unlocked", false) && !statsData.IsMember)
+		if (sceneName == "MapDesertNG" && !DataStore.GetBool(sceneName + "Unlocked", false))
 		{
-			this.BuyMap("MapDesertNG");
+			RequestRewardedForDesert();
 			return;
 		}
 		if (sceneName == "StuntPark" && statsData.XP < this.UnlockStuntParkXP && !DataStore.GetBool(sceneName + "Unlocked", false) && !statsData.IsMember)
@@ -966,6 +966,33 @@ public class MenuManager : MonoBehaviour
 			PhotonNetwork.LeaveLobby();
 		}
 		SceneManager.LoadScene(sceneName);
+	}
+
+	public void RequestRewardedForDesert()
+	{
+		Advertisements.Instance.ShowRewardedVideo(DesertRewardedComplete);
+	}
+
+	private void DesertRewardedComplete(bool isCompleted)
+	{
+		if (isCompleted)
+		{
+			var desertWatchCount = PlayerPrefs.GetInt("Desert", 0);
+			if (desertWatchCount == 2)
+			{
+				DataStore.SetBool("MapDesertNG" + "Unlocked", true);
+				this.LoadMenu(MenuState.Map, false, false);
+			}
+			else
+			{
+				PlayerPrefs.SetInt("Desert", PlayerPrefs.GetInt("Desert")+1);
+				desertAdText.text = PlayerPrefs.GetInt(("Desert"), 0) + "/3";
+			}
+		}
+		else
+		{
+			this.ShowMessage("You should watch the Ads to open the Map !", true);
+		}
 	}
 
 	public void SelectTrailRaceRoom(GameObject roomElement)
@@ -5228,6 +5255,8 @@ public class MenuManager : MonoBehaviour
 	public Text FieldFindParts1;
 
 	public Text FieldFindParts2;
+
+	public Text desertAdText;
 
 	//public GameObject communityMapsButton;
 
