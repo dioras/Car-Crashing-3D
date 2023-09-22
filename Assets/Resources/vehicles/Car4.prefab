@@ -2050,7 +2050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   watchedAdCount: 0
   adCountToWatch: 3
-  IsBoughtWithads: 0
+  IsBoughtWithads: 1
   vehicleType: 1
   MoneyPrice: 25000
   GoldPrice: 125

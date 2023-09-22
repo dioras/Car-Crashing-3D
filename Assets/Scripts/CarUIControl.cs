@@ -1373,9 +1373,9 @@ public class CarUIControl : MonoBehaviour
 	
 	public RectTransform FuelArrow;
 
-	public float FuelMinAngle = -54;
+	private float FuelMinAngle = 17;
 
-	public float FuelMaxAngle = -112;
+	private float FuelMaxAngle = -37;
 
 	public float fuelAmountCurrent = 100;
 	public float fuelAmountMax = 100;
