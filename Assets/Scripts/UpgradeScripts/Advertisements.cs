@@ -30,12 +30,8 @@ public class Advertisements : MonoBehaviour
         string appKey = "unexpected_platform";
 #endif
 
-
-
         Debug.Log("unity-script: IronSource.Agent.validateIntegration");
         IronSource.Agent.validateIntegration();
-
-        Debug.Log("unity-script: unity version" + IronSource.unityVersion());
 
         // SDK init
         Debug.Log("unity-script: IronSource.Agent.init");

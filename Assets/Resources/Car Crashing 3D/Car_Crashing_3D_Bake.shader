@@ -1,4 +1,4 @@
-Shader "Offroad Outlaws/Bake"
+Shader "Car Crashing 3D/Bake"
 {
   Properties
   {

@@ -4,7 +4,7 @@ using System.Reflection;
 using Photon;
 using UnityEngine;
 
-[AddComponentMenu("Photon Networking/Photon View &v")]
+[AddComponentMenu("Photon Networking/Photon View")]
 public class PhotonView : Photon.MonoBehaviour
 {
 	public PhotonTransformView tView

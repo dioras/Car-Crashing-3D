@@ -1,4 +1,4 @@
-Shader "Offroad Outlaws/Diffuse"
+Shader "Car Crashing 3D/Diffuse"
 {
   Properties
   {

@@ -1,4 +1,4 @@
-Shader "Offroad Outlaws/Tire"
+Shader "Car Crashing 3D/Tire"
 {
   Properties
   {

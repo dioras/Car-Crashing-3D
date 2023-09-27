@@ -50,7 +50,7 @@ public class InGameMapMenu : MonoBehaviour
 		this.upvoteButton.GetComponent<Image>().color = ((!up) ? this.deselectedVoteButtonColor : this.selectedVoteButtonColor);
 		this.downvoteButton.GetComponent<Image>().color = (up ? this.deselectedVoteButtonColor : this.selectedVoteButtonColor);
 		LevelEditorTools.AddMapToVoted(GameState.mapToDownload, up);
-		WWW www = new WWW("http://offroadoutlaws.online/ChangeMapRating.php?ID=" + GameState.mapToDownload + "&amount=" + ((!up) ? "-1" : "1"));
+		//WWW www = new WWW("http://offroadoutlaws.online/ChangeMapRating.php?ID=" + GameState.mapToDownload + "&amount=" + ((!up) ? "-1" : "1"));
 	}
 
 	public GameObject menu;

@@ -1,4 +1,4 @@
-Shader "Offroad Outlaws/Diffuse dirt with UV0 for dirt"
+Shader "Car Crashing 3D/Diffuse dirt with UV0 for dirt"
 {
   Properties
   {

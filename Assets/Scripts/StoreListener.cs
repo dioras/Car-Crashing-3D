@@ -8,15 +8,15 @@ public class StoreListener : IStoreListener
 	public void InitializeIAP()
 	{
 		ConfigurationBuilder configurationBuilder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance(), new IPurchasingModule[0]);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.100gold", ProductType.Consumable);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.250gold", ProductType.Consumable);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.500gold", ProductType.Consumable);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.750gold", ProductType.Consumable);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.4000gold", ProductType.Consumable);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.10000gold", ProductType.Consumable);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.monthlyvip", ProductType.Subscription);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.timedvehiclepurchase", ProductType.Consumable);
-		configurationBuilder.AddProduct("com.battlecreek.offroadoutlaws.premiumvehiclepurchase", ProductType.Consumable);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.100gold", ProductType.Consumable);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.250gold", ProductType.Consumable);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.500gold", ProductType.Consumable);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.750gold", ProductType.Consumable);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.4000gold", ProductType.Consumable);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.10000gold", ProductType.Consumable);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.monthlyvip", ProductType.Subscription);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.timedvehiclepurchase", ProductType.Consumable);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.premiumvehiclepurchase", ProductType.Consumable);
 		UnityPurchasing.Initialize(this, configurationBuilder);
 	}
 
@@ -28,7 +28,12 @@ public class StoreListener : IStoreListener
 
 	public void OnInitializeFailed(InitializationFailureReason error)
 	{
-		UnityEngine.Debug.Log("Could not initialize UnityIAP");
+		Debug.Log("Could not initialize UnityIAP");
+	}
+
+	public void OnInitializeFailed(InitializationFailureReason error, string s)
+	{
+		Debug.Log("Could not initialize UnityIAP");
 	}
 
 	public void OnPurchaseFailed(Product i, PurchaseFailureReason p)
@@ -42,7 +47,7 @@ public class StoreListener : IStoreListener
 
 	public void PurchaseIAP(string product)
 	{
-		UnityEngine.Debug.Log("Purchasing: " + product);
+		Debug.Log("Purchasing: " + product);
 		if (this.controller == null)
 		{
 			MenuManager.Instance.ShowMessage("Cannot purchase right now. Make sure you are online?", true);
@@ -53,7 +58,7 @@ public class StoreListener : IStoreListener
 
 	public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
 	{
-		UnityEngine.Debug.Log("Processing purchase: " + purchaseEvent.purchasedProduct);
+		Debug.Log("Processing purchase: " + purchaseEvent.purchasedProduct.ToString());
 		if (purchaseEvent.purchasedProduct != null)
 		{
 			StatsData statsData = GameState.LoadStatsData();
@@ -61,7 +66,7 @@ public class StoreListener : IStoreListener
 			bool flag = false;
 			bool flag2 = false;
 			
-			if (purchaseEvent.purchasedProduct.definition.id == "com.battlecreek.offroadoutlaws.monthlyvip" && statsData.IsMember)
+			if (purchaseEvent.purchasedProduct.definition.id == "com.carcrash.carcrashinggames.monthlyvip" && statsData.IsMember)
 			{
 				statsData.IsMember = true;
 				GameState.SaveStatsData(statsData);
@@ -70,32 +75,32 @@ public class StoreListener : IStoreListener
 			string id = purchaseEvent.purchasedProduct.definition.id;
 			switch (id)
 			{
-			case "com.battlecreek.offroadoutlaws.100gold":
+			case "com.carcrash.carcrashinggames.100gold":
 				num = 100;
 				break;
-			case "com.battlecreek.offroadoutlaws.250gold":
+			case "com.carcrash.carcrashinggames.250gold":
 				num = 250;
 				break;
-			case "com.battlecreek.offroadoutlaws.500gold":
+			case "com.carcrash.carcrashinggames.500gold":
 				num = 500;
 				break;
-			case "com.battlecreek.offroadoutlaws.750gold":
+			case "com.carcrash.carcrashinggames.750gold":
 				num = 750;
 				break;
-			case "com.battlecreek.offroadoutlaws.4000gold":
+			case "com.carcrash.carcrashinggames.4000gold":
 				num = 4000;
 				break;
-			case "com.battlecreek.offroadoutlaws.10000gold":
+			case "com.carcrash.carcrashinggames.10000gold":
 				num = 10000;
 				break;
-			case "com.battlecreek.offroadoutlaws.monthlyvip":
+			case "com.carcrash.carcrashinggames.monthlyvip":
 				num = 200;
 				flag = true;
 				break;
-			case "com.battlecreek.offroadoutlaws.timedvehiclepurchase":
+			case "com.carcrash.carcrashinggames.timedvehiclepurchase":
 				flag2 = true;
 				break;
-			case "com.battlecreek.offroadoutlaws.premiumvehiclepurchase":
+			case "com.carcrash.carcrashinggames.premiumvehiclepurchase":
 				flag2 = true;
 				break;
 			}
@@ -120,15 +125,15 @@ public class StoreListener : IStoreListener
 			{
 				GameState.SetMembership(true);
 				MenuManager.Instance.HideBecomeMember();
-				UnityEngine.Debug.Log(MenuManager.Instance.LoadedVehiclesInGarage.Count);
-				UnityEngine.Debug.Log(MenuManager.Instance.SelectedVehicleInGarageID);
+				Debug.Log(MenuManager.Instance.LoadedVehiclesInGarage.Count);
+				Debug.Log(MenuManager.Instance.SelectedVehicleInGarageID);
 				MenuManager.Instance.LoadMenu(MenuState.MainMenu, true, false);
 			}
 			MenuManager.Instance.UpdateScreen();
 		}
 		else
 		{
-			UnityEngine.Debug.Log("Product was null!");
+			Debug.Log("Product was null!");
 		}
 		return PurchaseProcessingResult.Complete;
 	}

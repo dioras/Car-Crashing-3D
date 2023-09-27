@@ -210,12 +210,10 @@ public class BodyPartsSwitcher : MonoBehaviour
 		if (this.MeshesMerged)
 		{
 			this.UpdateBodyColorMerged();
-			Debug.Log("Merged", gameObject);
 		}
 		else
 		{
 			this.UpdateBodyColorUnmerged();
-			Debug.Log("UnMerged", gameObject);
 		}
 		this.GenerateRimsTexture();
 	}
@@ -284,11 +282,11 @@ public class BodyPartsSwitcher : MonoBehaviour
 	{
 		List<Renderer> list = new List<Renderer>();
 		List<Shader> list2 = new List<Shader>();
-		list2.Add(Shader.Find("Offroad Outlaws/Body"));
-		list2.Add(Shader.Find("Offroad Outlaws/Color dirt"));
-		list2.Add(Shader.Find("Offroad Outlaws/Diffuse dirt"));
-		list2.Add(Shader.Find("Offroad Outlaws/Diffuse dirt with UV0 for dirt"));
-		list2.Add(Shader.Find("Offroad Outlaws/Tire"));
+		list2.Add(Shader.Find("Car Crashing 3D/Body"));
+		list2.Add(Shader.Find("Car Crashing 3D/Color dirt"));
+		list2.Add(Shader.Find("Car Crashing 3D/Diffuse dirt"));
+		list2.Add(Shader.Find("Car Crashing 3D/Diffuse dirt with UV0 for dirt"));
+		list2.Add(Shader.Find("Car Crashing 3D/Tire"));
 		foreach (Renderer renderer in base.GetComponentsInChildren<Renderer>(IncludeInactive))
 		{
 			foreach (Material material in renderer.sharedMaterials)
@@ -374,7 +372,7 @@ public class BodyPartsSwitcher : MonoBehaviour
 		RenderTexture renderTexture = new RenderTexture(512, 512, 0);
 		this.BakedWrap = new Texture2D(renderTexture.width, renderTexture.height, TextureFormat.RGBA32, false);
 		Renderer[] allRenderers = this.GetAllRenderers(false);
-		Material material = new Material(Shader.Find("Offroad Outlaws/Bake"));
+		Material material = new Material(Shader.Find("Car Crashing 3D/Bake"));
 		for (int i = 0; i < this.WrapLayers.Count; i++)
 		{
 			Texture value = Resources.Load("Wraps/Wrap" + this.WrapLayers[i].ID) as Texture;

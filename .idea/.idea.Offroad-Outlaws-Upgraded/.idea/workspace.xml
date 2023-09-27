@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81dfcfc6-4007-4218-82d1-b36c0a98d899" name="Changes" comment="" />
+    <list default="true" id="81dfcfc6-4007-4218-82d1-b36c0a98d899" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoreListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoreListener.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,6 +122,7 @@
       <workItem from="1695366183260" duration="6048000" />
       <workItem from="1695383044455" duration="3857000" />
       <workItem from="1695392171179" duration="4958000" />
+      <workItem from="1695798734832" duration="239000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,10 @@
-Shader "Offroad Outlaws/Color"
+Shader "Car Crashing 3D/Color dirt"
 {
   Properties
   {
     [PerRendererData] _BaseColor ("Base Color", Color) = (1,1,1,1)
+    [PerRendererData] _Dirt ("Dirt", 2D) = "black" {}
+    [PerRendererData] _DirtColor ("Dirt Color", Color) = (0.88,0.62,0.3,0)
   }
   SubShader
   {
@@ -50,11 +52,15 @@ Shader "Offroad Outlaws/Color"
       //uniform float4x4 unity_WorldToObject;
       //uniform float4x4 unity_MatrixVP;
       uniform float4 _LightColor0;
+      uniform float4 _Dirt_ST;
+      uniform sampler2D _Dirt;
       uniform float4 _BaseColor;
+      uniform float4 _DirtColor;
       struct appdata_t
       {
           float4 vertex :POSITION;
           float3 normal :NORMAL;
+          float4 texcoord :TEXCOORD0;
       };
       
       struct OUT_Data_Vert
@@ -66,6 +72,7 @@ Shader "Offroad Outlaws/Color"
       
       struct v2f
       {
+          float2 xlv_TEXCOORD2 :TEXCOORD2;
           float3 xlv_COLOR0 :COLOR0;
       };
       
@@ -82,6 +89,7 @@ Shader "Offroad Outlaws/Color"
           float3 worldN_2;
           float2 tmpvar_3;
           float3 tmpvar_4;
+          tmpvar_3 = TRANSFORM_TEX(in_v.texcoord.xy, _Dirt);
           float4 tmpvar_5;
           tmpvar_5.w = 1;
           tmpvar_5.xyz = float3(in_v.vertex.xyz);
@@ -126,15 +134,35 @@ Shader "Offroad Outlaws/Color"
       {
           OUT_Data_Frag out_f;
           float4 tmpvar_1;
-          float3 finalColor_2;
-          float3 tmpvar_3;
-          tmpvar_3 = _BaseColor.xyz;
-          finalColor_2 = tmpvar_3;
-          finalColor_2 = (finalColor_2 * in_f.xlv_COLOR0);
-          float4 tmpvar_4;
-          tmpvar_4.w = 1;
-          tmpvar_4.xyz = float3(finalColor_2);
-          tmpvar_1 = tmpvar_4;
+          float dirtFactor_2;
+          float4 dirtColor_3;
+          float4 dirtTex_4;
+          float3 finalColor_5;
+          float3 tmpvar_6;
+          tmpvar_6 = _BaseColor.xyz;
+          finalColor_5 = tmpvar_6;
+          float4 tmpvar_7;
+          tmpvar_7 = tex2D(_Dirt, in_f.xlv_TEXCOORD2);
+          dirtTex_4 = tmpvar_7;
+          float4 tmpvar_8;
+          tmpvar_8 = (dirtTex_4 * _DirtColor);
+          dirtColor_3 = tmpvar_8;
+          float tmpvar_9;
+          if(float((dirtTex_4.w>=_DirtColor.w)))
+          {
+              tmpvar_9 = 1;
+          }
+          else
+          {
+              tmpvar_9 = 0;
+          }
+          dirtFactor_2 = tmpvar_9;
+          float _tmp_dvx_3 = (dirtTex_4.w * dirtFactor_2);
+          finalColor_5 = (lerp(finalColor_5, dirtColor_3.xyz, float3(_tmp_dvx_3, _tmp_dvx_3, _tmp_dvx_3)) * in_f.xlv_COLOR0);
+          float4 tmpvar_10;
+          tmpvar_10.w = 1;
+          tmpvar_10.xyz = float3(finalColor_5);
+          tmpvar_1 = tmpvar_10;
           out_f.color = tmpvar_1;
           return out_f;
       }
