@@ -204,9 +204,7 @@ public class MenuManager : MonoBehaviour
 		else
 		{
 			UnityEngine.Debug.Log("Already initialized");
-		}
-		
-		Advertisements.Instance.Initialize();
+		}		
 	}
 
 	public void OpenURL(string url)
@@ -968,10 +966,10 @@ public class MenuManager : MonoBehaviour
 		Advertisements.Instance.ShowRewardedVideo(DesertRewardedComplete);
 	}
 
-	private void DesertRewardedComplete(bool isCompleted)
+	private void DesertRewardedComplete()
 	{
-		if (isCompleted)
-		{
+		//if (isCompleted)
+		//{
 			var desertWatchCount = PlayerPrefs.GetInt("Desert", 0);
 			if (desertWatchCount == 2)
 			{
@@ -983,11 +981,11 @@ public class MenuManager : MonoBehaviour
 				PlayerPrefs.SetInt("Desert", PlayerPrefs.GetInt("Desert")+1);
 				desertAdText.text = PlayerPrefs.GetInt(("Desert"), 0) + "/3";
 			}
-		}
-		else
-		{
-			this.ShowMessage("You should watch the Ads to open the Map !", true);
-		}
+		//}
+		//else
+		//{
+		//	this.ShowMessage("You should watch the Ads to open the Map !", true);
+		//}
 	}
 
 	public void SelectTrailRaceRoom(GameObject roomElement)
@@ -1130,10 +1128,10 @@ public class MenuManager : MonoBehaviour
 		Advertisements.Instance.ShowRewardedVideo(RewardedCompleteMethod);
 	}
 
-	private void RewardedCompleteMethod(bool isCompleted)
+	private void RewardedCompleteMethod()
 	{
-		if (isCompleted)
-		{
+		//if (isCompleted)
+		//{
 			var component = this.LoadedVehicleInSelector.GetComponent<VehicleDataManager>();
 			if (component == null) return;
 			
@@ -1145,11 +1143,11 @@ public class MenuManager : MonoBehaviour
 				
 				SaveAdData.Instance.ResetKey(component.gameObject.name);
 			}
-		}
-		else
-		{
-			print("rewarded is " + isCompleted);
-		}
+		//}
+		//else
+		//{
+		//	print("rewarded is " + isCompleted);
+		//}
 	}
 
 	public void Wash()
@@ -4290,11 +4288,11 @@ public class MenuManager : MonoBehaviour
 		this.storeCallbackTimer = 0f;
 		if (this.SelectedArray == this.TurnKeyVehicles)
 		{
-			this.PurchaseProduct("com.battlecreek.offroadoutlaws.premiumvehiclepurchase");
+			this.PurchaseProduct("com.carcrash.carcrashinggames.premiumvehiclepurchase");
 		}
 		else
 		{
-			this.PurchaseProduct("com.battlecreek.offroadoutlaws.timedvehiclepurchase");
+			this.PurchaseProduct("com.carcrash.carcrashinggames.timedvehiclepurchase");
 		}
 	}
 
@@ -5187,12 +5185,9 @@ public class MenuManager : MonoBehaviour
 		Advertisements.Instance.ShowRewardedVideo(DuallyAdsCompleted);
 	}
 
-	private void DuallyAdsCompleted(bool isCompleleted)
-	{
-		if (isCompleleted)
-		{
-			BuyDuallies();
-		}
+	private void DuallyAdsCompleted()
+	{	
+		BuyDuallies();	
 	}
 	
 	public void RequestAdForGlossyPaint()
@@ -5200,12 +5195,10 @@ public class MenuManager : MonoBehaviour
 		Advertisements.Instance.ShowRewardedVideo(GlossyAdsCompleted);
 	}
 
-	private void GlossyAdsCompleted(bool isCompleleted)
+	private void GlossyAdsCompleted()
 	{
-		if (isCompleleted)
-		{
-			BuyGlossy();
-		}
+
+		BuyGlossy();
 	}
 	
 	public static MenuManager Instance;

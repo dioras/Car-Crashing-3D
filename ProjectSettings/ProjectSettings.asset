@@ -165,7 +165,7 @@ PlayerSettings:
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 22
-  AndroidTargetSdkVersion: 31
+  AndroidTargetSdkVersion: 33
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -794,7 +794,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: UNITY_POST_PROCESSING_STACK_V2;USE_ADMOB;USE_ADMOB_PATCH
+    Android: UNITY_POST_PROCESSING_STACK_V2;USE_ADMOB;USE_ADMOB_PATCH;USE_IRONSOURCE
     EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2
     GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2
     Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2
@@ -898,7 +898,8 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Purchasing: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -918,11 +919,11 @@ PlayerSettings:
   apiCompatibilityLevel: 3
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 2347c2ee-b3e3-4f99-98bf-f37d65561553
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Car Crashing 3D
+  organizationId: sunset-works
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
   hmiLoadingImage: {fileID: 0}

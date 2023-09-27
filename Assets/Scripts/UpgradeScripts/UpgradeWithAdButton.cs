@@ -90,7 +90,7 @@ namespace UpgradeScripts
 
                 upgradeButton.SetActive(flag);
                 adUpgradeButton.SetActive(!flag);
-                _button.interactable = Advertisements.Instance.IsRewardVideoAvailable();
+                _button.interactable = Advertisements.Instance.IsRewardedAvailable();
                 
                 lastTime = Time.time;
             }
@@ -150,10 +150,8 @@ namespace UpgradeScripts
             Advertisements.Instance.ShowRewardedVideo(RewardedCompleteMethod);
         }
 
-        private void RewardedCompleteMethod(bool isCompleted)
+        private void RewardedCompleteMethod()
         {
-	        if (!isCompleted) return;
-	        
 	        switch (_menuManager.menuState)
 	        {
 		        case MenuState.Power:
