@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CustomVP;
+using Unity.Services.Core;
+using Unity.Services.Core.Environments;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -66,6 +68,8 @@ public class CarUIControl : MonoBehaviour
 			this.LoadingScreenLabel.text = "Level editor builds your level, it may take some time. Wait...";
 		}
 		this.ChatBox.SetActive(GameState.GameMode == GameMode.Multiplayer);
+
+		InitUGS();
 	}
 
 	private void Start()
@@ -164,6 +168,19 @@ public class CarUIControl : MonoBehaviour
 		}
 		
 		Advertisements.Instance.ShowInterstitial();
+
+		if (storeListener == null)
+		{
+			storeListener = new StoreListener();
+			storeListener.InitializeIAP();
+		}
+		else
+		{
+			Debug.Log("Already initialized");
+		}		
+
+		var statsData = GameState.LoadStatsData();
+		hasUnlimitedFuel = statsData.HasUnlimitedFuel;
 	}
 
 	private void OnValidate()
@@ -684,6 +701,8 @@ public class CarUIControl : MonoBehaviour
 	}
 	public void UpdateFuel()
 	{
+		if(hasUnlimitedFuel) return;
+
 		float fuelConsumption = Mathf.Abs(carController.CurrentTorque / carController.LeveledMaxTorque) * Time.deltaTime / carFuelConsumption;
 
 		fuelAmountCurrent -= fuelConsumption;
@@ -871,6 +890,7 @@ public class CarUIControl : MonoBehaviour
 			AudioListener.volume = 1f;
 		}
 		Time.timeScale = 1f;
+		this.LoadingScreen.GetComponent<LoadMainScene>().sceneToLoad = "Menu";
 		this.LoadingScreen.SetActive(exiting);
 		this.LoadingScreenLabel.text = "Going back home!";
 		this.PausePanel.SetActive(false);
@@ -881,9 +901,11 @@ public class CarUIControl : MonoBehaviour
 		}
 		if (exiting)
 		{
-			SceneManager.LoadScene("Menu");
+			//SceneManager.LoadScene("Menu");
 		}
 	}
+
+	
 
 	public void LaunchDrone()
 	{
@@ -1231,12 +1253,47 @@ public class CarUIControl : MonoBehaviour
 		this.HideGaugeImage.transform.rotation = Quaternion.Euler(0f, 0f, -this.HideGaugeImage.transform.rotation.eulerAngles.z);
 	}
 
+	public void ProcessPurchase(string product)
+	{
+		this.storeListener.PurchaseFromMap(product);
+	}
+
+	public void SetUnlimitedFuel(bool flag)
+	{
+		fuelAmountCurrent = fuelAmountMax;
+		UpdateFuel();
+
+		hasUnlimitedFuel = flag;
+		
+		refuelPanel.SetActive(false);
+		
+		ShowMessage("You have unlimited fuel now!!"); 
+	}
+
+	private async void InitUGS()
+	{
+		string environment = "production";
+        try
+        {
+            var options = new InitializationOptions()
+                .SetEnvironmentName(environment);
+
+            await UnityServices.InitializeAsync(options);
+        }
+        catch (Exception exception)
+        {
+           Debug.LogException(exception);
+        }
+	}
+
 	[Header("Refuel Ads")]
 	public float adsTimer;
 	public float adsInterval = 150;
+	public bool hasUnlimitedFuel;
 	public GameObject refuelPanel;
 	private CameraController.CameraMode tempCameraMode;
 	private bool isAdsPanelOpened;
+	private StoreListener storeListener;
 
 	public CarUIControl.ControlType controlType;
 
@@ -1377,8 +1434,8 @@ public class CarUIControl : MonoBehaviour
 
 	private float FuelMaxAngle = -37;
 
-	public float fuelAmountCurrent = 100;
-	public float fuelAmountMax = 100;
+	private float fuelAmountCurrent = 80;
+	private float fuelAmountMax = 80;
 	public float carFuelConsumption = 20;
 	
 

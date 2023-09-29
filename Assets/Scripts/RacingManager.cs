@@ -116,6 +116,7 @@ public class RacingManager : MonoBehaviour
 	{
 		this.SaveVehicleData();
 		SceneManager.LoadScene("Menu");
+		print("exiting from garage");
 	}
 
 	private void Update()

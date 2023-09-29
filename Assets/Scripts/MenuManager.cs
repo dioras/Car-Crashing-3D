@@ -52,6 +52,7 @@ public class MenuManager : MonoBehaviour
 			statsData.Money = 30000;
 			statsData.Gold = 0;
 			statsData.XP = 0;
+			statsData.HasUnlimitedFuel = false;
 			GameState.SaveStatsData(statsData);
 			DataStore.SetBool("Opened", true);
 			this.ShowMessage("We've given you $30,000 to start - visit the dealership!\r\n\r\nHint: That's enough for a truck and a quad!", true);
@@ -639,25 +640,25 @@ public class MenuManager : MonoBehaviour
 		{
 			DataStore.SetBool("UseFBName", false);
 		}
-		bool @bool = DataStore.GetBool("UseFBName", false);
-		if (@bool)
-		{
-			this.TrailName.text = GameState.PlayerName;
-			this.TrailNameHint.text = "Tap to use generated name";
-		}
-		else
-		{
-			if (AccessToken.CurrentAccessToken == null)
-			{
-				this.TrailNameHint.text = "Tap the \"f\" to login using Facebook";
-			}
-			else
-			{
-				this.TrailNameHint.text = "Tap to use Facebook name";
-			}
-			this.TrailName.text = DataStore.GetString("GeneratedName");
-		}
-		PhotonNetwork.player.NickName = this.TrailName.text;
+		// bool @bool = DataStore.GetBool("UseFBName", false);
+		// if (@bool)
+		// {
+		// 	this.TrailName.text = GameState.PlayerName;
+		// 	this.TrailNameHint.text = "Tap to use generated name";
+		// }
+		// else
+		// {
+		// 	if (AccessToken.CurrentAccessToken == null)
+		// 	{
+		// 		this.TrailNameHint.text = "Tap the \"f\" to login using Facebook";
+		// 	}
+		// 	else
+		// 	{
+		// 		this.TrailNameHint.text = "Tap to use Facebook name";
+		// 	}
+		// 	this.TrailName.text = DataStore.GetString("GeneratedName");
+		// }
+		// PhotonNetwork.player.NickName = this.TrailName.text;
 		string text = "Off";
 		if (DataStore.GetInt("AirControl") == -1)
 		{
@@ -937,7 +938,7 @@ public class MenuManager : MonoBehaviour
 	public void LoadScene(string sceneName)
 	{
 		StatsData statsData = GameState.LoadStatsData();
-		if (sceneName == "MapDesertNG" && !DataStore.GetBool(sceneName + "Unlocked", false))
+		if (sceneName == "MapDesertNG" && !DataStore.GetBool(sceneName + "Unlocked", false) && !statsData.IsMember)
 		{
 			RequestRewardedForDesert();
 			return;
@@ -953,12 +954,13 @@ public class MenuManager : MonoBehaviour
 			return;
 		}
 		this.SceneLoadingText.text = "Loading trailer...";
+		this.SceneLoading.GetComponent<LoadMainScene>().sceneToLoad = sceneName;
 		this.SceneLoading.SetActive(true);
 		if (GameState.GameMode != GameMode.Multiplayer && PhotonNetwork.insideLobby)
 		{
 			PhotonNetwork.LeaveLobby();
 		}
-		SceneManager.LoadScene(sceneName);
+		//SceneManager.LoadScene(sceneName);
 	}
 
 	public void RequestRewardedForDesert()
@@ -4628,11 +4630,6 @@ public class MenuManager : MonoBehaviour
 	{
 		DataStore.SetBool("LinkedFB", false);
 		this.FacebookLoginWarning.SetActive(false);
-	}
-
-	public void LikeUs()
-	{
-		Application.OpenURL("http://facebook.com/OffroadOutlawsGame");
 	}
 
 	private void OnFacebookLoggedIn(ILoginResult result)

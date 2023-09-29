@@ -131,6 +131,13 @@ public static class GameState
 		GameState.SaveStatsData(statsData);
 	}
 
+	public static void SetUnlimitedFuel(bool hasUnlimitedFuel)
+	{
+		StatsData statsData = GameState.LoadStatsData();
+		statsData.HasUnlimitedFuel = hasUnlimitedFuel;
+		GameState.SaveStatsData(statsData);
+	}
+
 	public static void AddXP(int amount)
 	{
 		StatsData statsData = GameState.LoadStatsData();

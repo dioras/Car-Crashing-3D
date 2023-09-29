@@ -1,4 +1,5 @@
 using System;
+using System.Drawing.Printing;
 using UnityEngine;
 using UnityEngine.Purchasing;
 using UnityEngine.Purchasing.Extension;
@@ -14,7 +15,8 @@ public class StoreListener : IStoreListener
 		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.750gold", ProductType.Consumable);
 		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.4000gold", ProductType.Consumable);
 		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.10000gold", ProductType.Consumable);
-		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.monthlyvip", ProductType.Subscription);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.monthly", ProductType.Subscription);
+		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.unlimitedfuel", ProductType.NonConsumable);
 		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.timedvehiclepurchase", ProductType.Consumable);
 		configurationBuilder.AddProduct("com.carcrash.carcrashinggames.premiumvehiclepurchase", ProductType.Consumable);
 		UnityPurchasing.Initialize(this, configurationBuilder);
@@ -38,7 +40,20 @@ public class StoreListener : IStoreListener
 
 	public void OnPurchaseFailed(Product i, PurchaseFailureReason p)
 	{
-		MenuManager.Instance.ShowMessage("Could not complete: " + p.ToString(), true);
+		if(MenuManager.Instance != null)
+			MenuManager.Instance.ShowMessage("Could not complete: " + p.ToString(), true);
+		else
+			CarUIControl.Instance.ShowMessage("Could not complete: " + p.ToString());
+	}
+
+	public void ShowOnlineMessage()
+	{
+		if(MenuManager.Instance != null){
+			MenuManager.Instance.ShowMessage("Cannot purchase right now. Make sure you are online?", true);
+		}
+		else{
+			CarUIControl.Instance.ShowMessage("Cannot purchase right now. Make sure you are online?");
+		}
 	}
 
 	public void RestoreIAP()
@@ -50,7 +65,18 @@ public class StoreListener : IStoreListener
 		Debug.Log("Purchasing: " + product);
 		if (this.controller == null)
 		{
-			MenuManager.Instance.ShowMessage("Cannot purchase right now. Make sure you are online?", true);
+			ShowOnlineMessage();
+			return;
+		}
+		this.controller.InitiatePurchase(product);
+	}
+
+	public void PurchaseFromMap(string product)
+	{
+		Debug.Log("Purchasing: " + product);
+		if (this.controller == null)
+		{
+			CarUIControl.Instance.ShowMessage("Cannot purchase right now. Make sure you are online?");
 			return;
 		}
 		this.controller.InitiatePurchase(product);
@@ -65,11 +91,19 @@ public class StoreListener : IStoreListener
 			int num = 0;
 			bool flag = false;
 			bool flag2 = false;
+			bool flag3 = false;
 			
 			if (purchaseEvent.purchasedProduct.definition.id == "com.carcrash.carcrashinggames.monthlyvip" && statsData.IsMember)
 			{
 				statsData.IsMember = true;
 				GameState.SaveStatsData(statsData);
+				return PurchaseProcessingResult.Complete;
+			}
+			else if(purchaseEvent.purchasedProduct.definition.id == "com.carcrash.carcrashinggames.unlimitedfuel" && statsData.HasUnlimitedFuel)
+			{
+				statsData.HasUnlimitedFuel = true;
+				GameState.SaveStatsData(statsData);
+				CarUIControl.Instance.SetUnlimitedFuel(true);
 				return PurchaseProcessingResult.Complete;
 			}
 			string id = purchaseEvent.purchasedProduct.definition.id;
@@ -93,9 +127,12 @@ public class StoreListener : IStoreListener
 			case "com.carcrash.carcrashinggames.10000gold":
 				num = 10000;
 				break;
-			case "com.carcrash.carcrashinggames.monthlyvip":
+			case "com.carcrash.carcrashinggames.monthly":
 				num = 200;
 				flag = true;
+				break;
+			case "com.carcrash.carcrashinggames.unlimitedfuel":
+				flag3 = true;
 				break;
 			case "com.carcrash.carcrashinggames.timedvehiclepurchase":
 				flag2 = true;
@@ -104,6 +141,14 @@ public class StoreListener : IStoreListener
 				flag2 = true;
 				break;
 			}
+
+			if(!statsData.HasUnlimitedFuel && flag3)
+			{
+				GameState.SetUnlimitedFuel(true);
+				CarUIControl.Instance.SetUnlimitedFuel(true);
+				return PurchaseProcessingResult.Complete;
+			}
+
 			string text = "Thanks! You now have " + num + " more gold";
 			if (flag)
 			{
