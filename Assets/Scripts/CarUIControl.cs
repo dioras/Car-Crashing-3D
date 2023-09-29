@@ -1287,8 +1287,6 @@ public class CarUIControl : MonoBehaviour
 	}
 
 	[Header("Refuel Ads")]
-	public float adsTimer;
-	public float adsInterval = 150;
 	public bool hasUnlimitedFuel;
 	public GameObject refuelPanel;
 	private CameraController.CameraMode tempCameraMode;
@@ -1434,8 +1432,8 @@ public class CarUIControl : MonoBehaviour
 
 	private float FuelMaxAngle = -37;
 
-	private float fuelAmountCurrent = 80;
-	private float fuelAmountMax = 80;
+	private float fuelAmountCurrent = 85;
+	private float fuelAmountMax = 85;
 	public float carFuelConsumption = 20;
 	
 
