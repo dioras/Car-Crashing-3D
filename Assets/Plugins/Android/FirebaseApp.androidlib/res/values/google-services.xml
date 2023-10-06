@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">769395282491</string>
+  <string name="google_storage_bucket" translatable="false">car-crashing-3d.appspot.com</string>
+  <string name="project_id" translatable="false">car-crashing-3d</string>
+  <string name="google_api_key" translatable="false">AIzaSyDdqVeIxRTaZaIyJALPwirP3s7TBWXIHi8</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDdqVeIxRTaZaIyJALPwirP3s7TBWXIHi8</string>
+  <string name="google_app_id" translatable="false">1:769395282491:android:71466c1271c4b8815c821e</string>
+  <string name="default_web_client_id" translatable="false">769395282491-3u2cqtdrp0r85v4a9i1vi5nmfoj6q7ig.apps.googleusercontent.com</string>
+</resources>

@@ -40,6 +40,43 @@ public class Advertisements : MonoBehaviour
 
 		IronSourceEvents.onSdkInitializationCompletedEvent += OnSdkInitializationComplete;
 		IronSourceRewardedVideoEvents.onAdRewardedEvent += OnRewardedVideoClosed;
+
+		//Add AdInfo Interstitial Events
+		IronSourceInterstitialEvents.onAdReadyEvent += InterstitialOnAdReadyEvent;
+		IronSourceInterstitialEvents.onAdLoadFailedEvent += InterstitialOnAdLoadFailed;
+		IronSourceInterstitialEvents.onAdOpenedEvent += InterstitialOnAdOpenedEvent;
+		IronSourceInterstitialEvents.onAdClickedEvent += InterstitialOnAdClickedEvent;
+		IronSourceInterstitialEvents.onAdShowSucceededEvent += InterstitialOnAdShowSucceededEvent;
+		IronSourceInterstitialEvents.onAdShowFailedEvent += InterstitialOnAdShowFailedEvent;
+		IronSourceInterstitialEvents.onAdClosedEvent += InterstitialOnAdClosedEvent;
+	}
+
+	/************* Interstitial AdInfo Delegates *************/
+	// Invoked when the interstitial ad was loaded succesfully.
+	void InterstitialOnAdReadyEvent(IronSourceAdInfo adInfo) {
+		Debug.Log("Inter loaded success!!");
+	}
+	 // Invoked when the initialization process has failed.
+	void InterstitialOnAdLoadFailed(IronSourceError ironSourceError) {
+		Debug.LogError("Inter loaded failed!!");
+	}
+	// Invoked when the Interstitial Ad Unit has opened. This is the impression indication. 
+	void InterstitialOnAdOpenedEvent(IronSourceAdInfo adInfo) {
+	}
+	// Invoked when end user clicked on the interstitial ad
+	void InterstitialOnAdClickedEvent(IronSourceAdInfo adInfo) {
+	}
+	// Invoked when the ad failed to show.
+	void InterstitialOnAdShowFailedEvent(IronSourceError ironSourceError, IronSourceAdInfo adInfo) {
+		Debug.LogError("Inter failed to SHOW");
+	}
+	// Invoked when the interstitial ad closed and the user went back to the application screen.
+	void InterstitialOnAdClosedEvent(IronSourceAdInfo adInfo) {
+	}
+	// Invoked before the interstitial ad was opened, and before the InterstitialOnAdOpenedEvent is reported.
+	// This callback is not supported by all networks, and we recommend using it only if  
+	// it's supported by all networks you included in your build. 
+	void InterstitialOnAdShowSucceededEvent(IronSourceAdInfo adInfo) {
 	}
 
 	private void OnApplicationPause(bool pause) {
@@ -47,13 +84,16 @@ public class Advertisements : MonoBehaviour
 	}
 
 	public void ShowInterstitial() {
-        if(!IsInterstitialAvailable()) return;
-		IronSource.Agent.showInterstitial();
+        if(IronSource.Agent.isInterstitialReady())
+		{
+			Debug.Log("Viewing interstitial ads");
+			IronSource.Agent.showInterstitial();
+		}
+		else
+		{
+			Debug.Log("interstitial ads are not ready");
+		}
 	}
-
-    public bool IsInterstitialAvailable(){
-        return IronSource.Agent.isInterstitialReady();
-    }
 
 	public bool IsRewardedAvailable() {
 		return IronSource.Agent.isRewardedVideoAvailable();
@@ -71,7 +111,8 @@ public class Advertisements : MonoBehaviour
 	}
 
 	private void OnSdkInitializationComplete() {
-		Debug.LogError("OnSDKInitializationComplete");
+		Debug.Log("OnSDKInitializationComplete");
+		IronSource.Agent.loadInterstitial();
 		//IronSource.Agent.launchTestSuite();
 	}
 }

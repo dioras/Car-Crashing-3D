@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "769395282491",
+    "project_id": "car-crashing-3d",
+    "storage_bucket": "car-crashing-3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769395282491:android:71466c1271c4b8815c821e",
+        "android_client_info": {
+          "package_name": "com.carcrash.CarCrashingGames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769395282491-3u2cqtdrp0r85v4a9i1vi5nmfoj6q7ig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdqVeIxRTaZaIyJALPwirP3s7TBWXIHi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769395282491-3u2cqtdrp0r85v4a9i1vi5nmfoj6q7ig.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "769395282491-iudviefjnenr4u8pqjdnpcdomvtfhprl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.carcrash.CarCrashingGames"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
