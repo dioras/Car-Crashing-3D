@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Battlehub.Integration;
 using Battlehub.MeshTools;
 using UnityEngine;
@@ -155,6 +156,8 @@ public class BodyPartsSwitcher : MonoBehaviour
 		}
 		this.suspensionController = base.GetComponent<SuspensionController>();
 		this.propBlock = new MaterialPropertyBlock();
+
+
 	}
 
 	private void Start()
@@ -671,7 +674,7 @@ public class BodyPartsSwitcher : MonoBehaviour
 	[SerializeField]
 	public GameObject TurboEngine;
 
-	private bool MeshesMerged;
+	public bool MeshesMerged;
 
 	private GameObject ResultMesh;
 

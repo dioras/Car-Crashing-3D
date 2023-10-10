@@ -17,6 +17,7 @@ public class Advertisements : MonoBehaviour
 		} else {
 			Destroy(gameObject);
 		}
+		
 	}
 
 	private void Start() {
@@ -72,6 +73,7 @@ public class Advertisements : MonoBehaviour
 	}
 	// Invoked when the interstitial ad closed and the user went back to the application screen.
 	void InterstitialOnAdClosedEvent(IronSourceAdInfo adInfo) {
+		IronSource.Agent.loadInterstitial();
 	}
 	// Invoked before the interstitial ad was opened, and before the InterstitialOnAdOpenedEvent is reported.
 	// This callback is not supported by all networks, and we recommend using it only if  

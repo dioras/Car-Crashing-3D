@@ -7930,7 +7930,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 0
+    m_RotationOrder: 4
   WheelsOffTheGround: 0
   Grounded: 0
   LongTilt: 0
@@ -8120,6 +8120,7 @@ MonoBehaviour:
   StockEngine: {fileID: 0}
   BlowerEngine: {fileID: 0}
   TurboEngine: {fileID: 0}
+  MeshesMerged: 0
   Washing: 0
   WinchInstalled: 0
   RepairPackInstalled: 0
@@ -8276,6 +8277,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869bc5071460426ddbde5f399ab25e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  watchedAdCount: 0
+  adCountToWatch: 3
+  IsBoughtWithads: 0
   vehicleType: 2
   MoneyPrice: 10000
   GoldPrice: 50
