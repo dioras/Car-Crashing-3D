@@ -335,8 +335,6 @@ public class CarUIControl : MonoBehaviour
 
 		if (fuelAmountCurrent <= 1)
 		{
-			tempCameraMode = CameraController.Instance.cameraMode;
-			CameraController.Instance.cameraMode = CameraController.CameraMode.Side;
 			refuelPanel.SetActive(true);
 			isAdsPanelOpened = true;
 		}
@@ -347,7 +345,6 @@ public class CarUIControl : MonoBehaviour
 		fuelAmountCurrent = fuelAmountMax;
 		isAdsPanelOpened = false;
 		Advertisements.Instance.ShowInterstitial();
-		CameraController.Instance.cameraMode = tempCameraMode;
 	}
 	public PlayerInfoUI CreatePlayerInfoBox(PhotonView v)
 	{
@@ -1289,7 +1286,6 @@ public class CarUIControl : MonoBehaviour
 	[Header("Refuel Ads")]
 	public bool hasUnlimitedFuel;
 	public GameObject refuelPanel;
-	private CameraController.CameraMode tempCameraMode;
 	private bool isAdsPanelOpened;
 	private StoreListener storeListener;
 

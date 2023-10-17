@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>769395282491-iudviefjnenr4u8pqjdnpcdomvtfhprl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.769395282491-iudviefjnenr4u8pqjdnpcdomvtfhprl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB3QaFyum-MI_k2QjttKvR2ibN9xpjtMlk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>769395282491</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.carcrash.CarCrashingGames</string>
+	<key>PROJECT_ID</key>
+	<string>car-crashing-3d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>car-crashing-3d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:769395282491:ios:07aacf23d3d581445c821e</string>
+</dict>
+</plist>

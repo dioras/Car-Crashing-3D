@@ -85,7 +85,6 @@ public class SaveAdData : MonoBehaviour
     private void LoadData()
     {
         var dataTemp = PlayerPrefs.GetString("AdData", "");
-        print(dataTemp);
         var data = JsonUtility.FromJson<AdDataList>(dataTemp);
         if (data != null)
             adDataList = data;
@@ -108,5 +107,3 @@ public class AdData
     public string id;
     public int adCount;
 }
-
-

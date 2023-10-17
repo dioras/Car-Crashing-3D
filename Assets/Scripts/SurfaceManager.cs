@@ -940,6 +940,7 @@ public class SurfaceManager : MonoBehaviour
 		}
 		if (surfaceMaterial.surfaceType == SurfaceMaterial.SurfaceType.Mud)
 		{
+			Debug.Log("digging");
 			this.CurrentMudTerrain.terrainData.SetHeightsDelayLOD(num, num2, heights);
 		}
 	}
@@ -1366,9 +1367,9 @@ public class SurfaceManager : MonoBehaviour
 
 	private TireMarksRenderer marksRenderer;
 
-	private MudTerrain[] MudTerrains;
+	public MudTerrain[] MudTerrains;
 
-	private MudTerrain CurrentMudTerrain;
+	public MudTerrain CurrentMudTerrain;
 
 	private TireMarksRenderer SnowMarksRenderer;
 

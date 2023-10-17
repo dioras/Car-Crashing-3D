@@ -7,6 +7,8 @@ public class MudTerrain : MonoBehaviour
 	{
 		base.GetComponent<TerrainCollider>().enabled = false;
 		this.DefaultHeights = this.terrainData.GetHeights(0, 0, this.hRes, this.hRes);
+		terRect.x = transform.position.x;
+		terRect.y = transform.position.z;
 	}
 
 	//[HideInInspector]

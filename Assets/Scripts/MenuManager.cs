@@ -103,7 +103,7 @@ public class MenuManager : MonoBehaviour
 			this.StaticFieldFinds[i].SetActive(i == num && !Utility.OwnsVehicle(text));
 			UnityEngine.Debug.Log(text + " set active? " + (i == num && !Utility.OwnsVehicle(text)).ToString());
 		}
-		MultiplayerManager.Connect();
+		//MultiplayerManager.Connect();
 		if (PhotonNetwork.inRoom)
 		{
 			PhotonNetwork.LeaveRoom();
@@ -123,7 +123,7 @@ public class MenuManager : MonoBehaviour
 		GameState.FailedToJoin = false;
 		if (!GameState.JustOpenedGame)
 		{
-			DataStore.CloudSave(false);
+			//DataStore.CloudSave(false);
 		}
 		GameState.JustOpenedGame = false;
 		this.LoadMenu(MenuState.MainMenu, false, true);
@@ -296,7 +296,7 @@ public class MenuManager : MonoBehaviour
 		this.Sidebar.localPosition = Vector3.Lerp(this.Sidebar.localPosition, b, Time.deltaTime * 10f);
 		if (this.enableCloudSave)
 		{
-			DataStore.CloudSave(false);
+			//DataStore.CloudSave(false);
 		}
 		if (this.keyboard != null && this.keyboard.done)
 		{
@@ -329,7 +329,7 @@ public class MenuManager : MonoBehaviour
 
 	private void OnApplicationQuit()
 	{
-		DataStore.CloudSave(false);
+		//DataStore.CloudSave(false);
 	}
 
 	public void PrivateRace()

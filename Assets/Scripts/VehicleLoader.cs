@@ -196,7 +196,7 @@ public class VehicleLoader : MonoBehaviour
 			}
 			this.playerDataManager.VehicleID = text;
 			this.playerDataManager.LoadVehicleData();
-			this.playerPartsSwitcher.UpdateColor(true);
+			this.playerPartsSwitcher.UpdateColor(false);
 			this.playerPartsSwitcher.UpdateDirtiness();
 			this.UpdateUiAccordingToCar();
 			bool @bool = DataStore.GetBool("DronePurchased", false);

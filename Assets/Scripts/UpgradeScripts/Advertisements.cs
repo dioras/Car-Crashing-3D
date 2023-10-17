@@ -11,7 +11,7 @@ public class Advertisements : MonoBehaviour
 	private void Awake() {
 		if (Instance == null) {
 			Instance = this;
-			//IronSource.Agent.setMetaData("is_test_suite", "enable");
+			IronSource.Agent.setMetaData("is_test_suite", "enable");
 			
 			DontDestroyOnLoad(gameObject);
 		} else {
@@ -26,7 +26,7 @@ public class Advertisements : MonoBehaviour
 #if UNITY_ANDROID
         string appKey = "19a3568a5";
 #elif UNITY_IPHONE
-        string appKey = "";
+        string appKey = "19a3734e5";
 #else
         string appKey = "unexpected_platform";
 #endif
@@ -114,7 +114,7 @@ public class Advertisements : MonoBehaviour
 
 	private void OnSdkInitializationComplete() {
 		Debug.Log("OnSDKInitializationComplete");
+		IronSource.Agent.launchTestSuite();
 		IronSource.Agent.loadInterstitial();
-		//IronSource.Agent.launchTestSuite();
 	}
 }

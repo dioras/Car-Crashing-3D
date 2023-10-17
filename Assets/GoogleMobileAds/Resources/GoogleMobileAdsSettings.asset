@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: GoogleMobileAdsSettings
   m_EditorClassIdentifier: 
   adMobAndroidAppId: ca-app-pub-4769515775892914~9213913649
-  adMobIOSAppId: 
-  delayAppMeasurementInit: 1
+  adMobIOSAppId: ca-app-pub-4769515775892914~9729467700
+  delayAppMeasurementInit: 0
+  optimizeInitialization: 0
+  optimizeAdLoading: 0
+  userTrackingUsageDescription: The data collected will be used to improve your gaming
+    experience and deliver you personalized offers.

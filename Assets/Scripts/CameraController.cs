@@ -468,7 +468,7 @@ public class CameraController : MonoBehaviour
 
 	private void DoSphereCam()
 	{
-		this.TargetYAngle = Mathf.Clamp(this.TargetYAngle, -45f, this.YMax);
+		this.TargetYAngle = Mathf.Clamp(this.TargetYAngle, 2, this.YMax); //minAngle2 was -45 before
 		this.AngleY = this.TargetYAngle;
 		this.DistanceCam = Mathf.Lerp(this.DistanceCam, this.DistanceCamTarget, 10f * Time.deltaTime);
 		bool flag = false;
