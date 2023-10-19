@@ -369,6 +369,10 @@ public class VehicleLoader : MonoBehaviour
 
 	public Transform GetAvailableSpawnPoint()
 	{
+		if (PlayerPrefs.GetInt("Tutorial", 0).Equals(0))
+		{
+			return GetTutorialTrailer();
+		}
 		List<Transform> list = new List<Transform>();
 		for (int i = 0; i < this.SpawnPoints.Length; i++)
 		{
@@ -391,6 +395,11 @@ public class VehicleLoader : MonoBehaviour
 			return list[UnityEngine.Random.Range(0, list.Count)];
 		}
 		return this.SpawnPoints[UnityEngine.Random.Range(0, this.SpawnPoints.Length)];
+	}
+
+	private Transform GetTutorialTrailer()
+	{
+		return RouteManager.Instance.transform.GetChild(0).GetComponent<Route>().SpawnedStart.transform;
 	}
 
 	private RacingManager racingManager;

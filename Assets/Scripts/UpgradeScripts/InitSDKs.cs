@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Facebook.Unity;
 using GameAnalyticsSDK;
+using UnityEditor;
 using UnityEngine;
 
 public class InitSDKs : MonoBehaviour
@@ -9,7 +10,11 @@ public class InitSDKs : MonoBehaviour
     private void Start()
     {
         GameAnalytics.Initialize();
-
+        #if UNITY_EDITOR
+        GameAnalytics.SettingsGA.Build = new();
+        GameAnalytics.SettingsGA.Build.Add(PlayerSettings.bundleVersion + "." + PlayerSettings.Android.bundleVersionCode);
+        GameAnalytics.SettingsGA.Build.Add(PlayerSettings.bundleVersion + "." + PlayerSettings.iOS.buildNumber);
+        #endif
         Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
         var dependencyStatus = task.Result;
         if (dependencyStatus == Firebase.DependencyStatus.Available) {

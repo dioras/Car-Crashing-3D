@@ -44,6 +44,11 @@ public class Route : MonoBehaviour
 				gameObject.SetActive(false);
 			}
 		}
+
+		if (PlayerPrefs.GetInt("Tutorial",0).Equals(0))
+		{
+			//CreateFenceForAllWaypoints();
+		}
 	}
 
 	private void OnDrawGizmos()
@@ -800,6 +805,7 @@ public class Route : MonoBehaviour
 		List<Transform> list = new List<Transform>();
 		for (int k = 0; k < this.Waypoints.Count; k++)
 		{
+			if(k != Waypoints.Count-1) Waypoints[k].forward = Waypoints[k + 1].position - Waypoints[k].position;
 			list.Add(this.Waypoints[k]);
 		}
 		foreach (RopeFencedSegment ropeFencedSegment in this.RopeFencedSegments)
@@ -809,40 +815,53 @@ public class Route : MonoBehaviour
 				if (!(ropeFencedSegment.FencePrefab == null))
 				{
 					List<Vector3> list2 = new List<Vector3>();
-					for (int l = 0; l < 4; l++)
+					var distance = Vector3.Distance(list[ropeFencedSegment.StartWaypoint + 1].transform.position, list[ropeFencedSegment.StartWaypoint].transform.position);
+					int lMax = Mathf.CeilToInt(distance / 6)*2;
+					for (int l = 0; l < lMax; l++)
 					{
-						GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(ropeFencedSegment.FencePrefab);
-						int num = (l <= 1) ? 0 : 1;
-						int num2 = ((float)l % 2f != 0f) ? 1 : -1;
-						Transform transform = list[0];
-						if (ropeFencedSegment.StartWaypoint + num < list.Count)
+						GameObject go = UnityEngine.Object.Instantiate<GameObject>(ropeFencedSegment.FencePrefab);
+						int num = (l <= lMax/2) ? 0 : 1;
+						int num2 = (l < lMax/2) ? 1 : -1;
+						Transform transform1 = list[ropeFencedSegment.StartWaypoint];
+						// if (ropeFencedSegment.StartWaypoint + num < list.Count)
+						// {
+						// 	transform1 = list[ropeFencedSegment.StartWaypoint + num];
+						// }
+						go.transform.position = transform1.position + transform1.forward * (l%(lMax/2)) * 6.03f + transform1.right * ropeFencedSegment.SegmentWidth * Mathf.Sign(num2);
+						if (num2.Equals(1))
 						{
-							transform = list[ropeFencedSegment.StartWaypoint + num];
+							go.transform.forward = list[ropeFencedSegment.StartWaypoint].transform.position -
+							                               list[ropeFencedSegment.StartWaypoint + 1].transform.position;  
 						}
-						gameObject.transform.position = transform.position + transform.forward * ropeFencedSegment.SegmentWidth * Mathf.Sign((float)num2);
-						gameObject.transform.parent = this.CheckpointsHolder;
-						this.SpawnedFences.Add(gameObject);
-						this.AlignObjectByGround(gameObject);
-						list2.Add(gameObject.transform.position);
-					}
-					for (int m = 0; m < 2; m++)
-					{
-						LineRenderer lineRenderer = new GameObject("Rope")
+						else
 						{
-							transform = 
-							{
-								parent = this.CheckpointsHolder
-							}
-						}.AddComponent<LineRenderer>();
-						lineRenderer.material = (Resources.Load("Materials/Rope", typeof(Material)) as Material);
-						lineRenderer.useWorldSpace = true;
-						lineRenderer.positionCount = 2;
-						lineRenderer.textureMode = LineTextureMode.Tile;
-						lineRenderer.widthMultiplier = 0.3f;
-						lineRenderer.SetPosition(0, list2[m]);
-						lineRenderer.SetPosition(1, list2[m + 2]);
-						this.SpawnedRopes.Add(lineRenderer);
+							go.transform.forward = -list[ropeFencedSegment.StartWaypoint].transform.position +
+							                               list[ropeFencedSegment.StartWaypoint + 1].transform.position;  
+						}
+						
+						go.transform.parent = this.CheckpointsHolder;
+						this.SpawnedFences.Add(go);
+						this.AlignObjectByGround(go);
+						list2.Add(go.transform.position);
 					}
+					// for (int m = 0; m < lMax; m++)
+					// {
+					// 	LineRenderer lineRenderer = new GameObject("Rope")
+					// 	{
+					// 		transform = 
+					// 		{
+					// 			parent = this.CheckpointsHolder
+					// 		}
+					// 	}.AddComponent<LineRenderer>();
+					// 	lineRenderer.material = (Resources.Load("Materials/Rope", typeof(Material)) as Material);
+					// 	lineRenderer.useWorldSpace = true;
+					// 	lineRenderer.positionCount = 2;
+					// 	lineRenderer.textureMode = LineTextureMode.Tile;
+					// 	lineRenderer.widthMultiplier = 0.3f;
+					// 	lineRenderer.SetPosition(0, list2[m]);
+					// 	lineRenderer.SetPosition(1, list2[m + 2]);
+					// 	this.SpawnedRopes.Add(lineRenderer);
+					// }
 				}
 			}
 		}

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.Core;
+using Unity.Services.Core.Environments;
 using UnityEngine;
 
 public class Advertisements : MonoBehaviour
@@ -50,6 +52,24 @@ public class Advertisements : MonoBehaviour
 		IronSourceInterstitialEvents.onAdShowSucceededEvent += InterstitialOnAdShowSucceededEvent;
 		IronSourceInterstitialEvents.onAdShowFailedEvent += InterstitialOnAdShowFailedEvent;
 		IronSourceInterstitialEvents.onAdClosedEvent += InterstitialOnAdClosedEvent;
+		
+		InitUGS();
+	}
+	
+	private async void InitUGS()
+	{
+		string environment = "production";
+		try
+		{
+			var options = new InitializationOptions()
+				.SetEnvironmentName(environment);
+
+			await UnityServices.InitializeAsync(options);
+		}
+		catch (Exception exception)
+		{
+			Debug.LogException(exception);
+		}
 	}
 
 	/************* Interstitial AdInfo Delegates *************/

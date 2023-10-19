@@ -5,7 +5,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81dfcfc6-4007-4218-82d1-b36c0a98d899" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoreListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoreListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Offroad-Outlaws-Upgraded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Offroad-Outlaws-Upgraded/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/11.5.0/firebase-analytics-unity-11.5.0.pom" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/11.5.0/firebase-analytics-unity-11.5.0.pom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/11.5.0/firebase-app-unity-11.5.0.pom" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/11.5.0/firebase-app-unity-11.5.0.pom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground_MountainTerrain_2k_alb_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground_MountainTerrain_2k_alb_s.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Ground_ScrubGrassField_2k_alb_s.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Ground_ScrubGrassField_2k_alb_s.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/VerticalFlag.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/VerticalFlag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/sandrock_BW.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/sandrock_BW.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.9.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.9.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-process-2.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-process-2.5.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.1.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.startup.startup-runtime-1.1.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.facebook.android.audience-network-sdk-6.16.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.facebook.android.audience-network-sdk-6.16.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.facebook.android.facebook-common-14.1.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.facebook.android.facebook-common-14.1.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.facebook.android.facebook-core-14.1.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.facebook.android.facebook-core-14.1.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-22.3.0.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-22.3.0.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-22.3.0.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-22.3.0.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.3.0.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-22.3.0.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.ump.user-messaging-platform-2.1.0.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.ump.user-messaging-platform-2.1.0.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.firebase.firebase-analytics-unity-11.5.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.firebase.firebase-analytics-unity-11.5.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.firebase.firebase-app-unity-11.5.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.firebase.firebase-app-unity-11.5.0.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.firebase.firebase-common-20.3.3.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.firebase.firebase-common-20.3.3.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.ironsource.adapters.unityadsadapter-4.3.31.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.ironsource.adapters.unityadsadapter-4.3.31.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.ironsource.sdk.mediationsdk-7.5.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.ironsource.sdk.mediationsdk-7.5.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.unity3d.ads.unity-ads-4.8.0.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.unity3d.ads.unity-ads-4.8.0.aar.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.vungle.publisher-sdk-android-6.12.1.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.vungle.publisher-sdk-android-6.12.1.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/ATV4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Bus.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Bus.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/vehicles/Cuda.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/vehicles/Cuda.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/MapWoodlandsV2NG.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Publish/MapWoodlandsV2NG.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/StuntPark.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Publish/StuntPark.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarUIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarUIControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadMainScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadMainScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RacingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RacingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Route.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Route.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/Advertisements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/Advertisements.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/InitSDKs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/InitSDKs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/Tutorial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/Tutorial.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VehicleLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VehicleLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/LevelEditor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/LevelEditor.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/New Terrain 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/New Terrain 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +78,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../Offroad Outlawz Project Files/Assets/Scripts/MenuManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/SaveAdData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5013d85076714eed87d56c27785ed840306e00/68/e9c66c3a/XmlSerializer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -66,7 +120,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.10f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -74,7 +128,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.9f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.10f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -123,6 +177,9 @@
       <workItem from="1695383044455" duration="3857000" />
       <workItem from="1695392171179" duration="4958000" />
       <workItem from="1695798734832" duration="239000" />
+      <workItem from="1697528508902" duration="7652000" />
+      <workItem from="1697543184111" duration="6200000" />
+      <workItem from="1697627834133" duration="16828000" />
     </task>
     <servers />
   </component>

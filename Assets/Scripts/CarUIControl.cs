@@ -167,7 +167,7 @@ public class CarUIControl : MonoBehaviour
 			this.DirectionalArrowsPool[k].gameObject.SetActive(false);
 		}
 		
-		Advertisements.Instance.ShowInterstitial();
+		if(!IsTutorial()) Advertisements.Instance.ShowInterstitial();
 
 		if (storeListener == null)
 		{
@@ -181,6 +181,15 @@ public class CarUIControl : MonoBehaviour
 
 		var statsData = GameState.LoadStatsData();
 		hasUnlimitedFuel = statsData.HasUnlimitedFuel;
+		
+		if(IsTutorial()) StartCoroutine(StartTrail());
+	}
+
+	private bool IsTutorial() => PlayerPrefs.GetInt("Tutorial", 0).Equals(0);
+	private IEnumerator StartTrail()
+	{
+		yield return new WaitForSeconds(0);
+		StartRace();
 	}
 
 	private void OnValidate()
@@ -845,11 +854,8 @@ public class CarUIControl : MonoBehaviour
 
 	public void ShowPause()
 	{
-		bool flag = false;
-		if (this.racingManager != null && this.racingManager.InRace)
-		{
-			flag = true;
-		}
+		bool flag = this.racingManager != null && this.racingManager.InRace;
+		
 		if (PlayerRouteRacingManager.Instance != null && PlayerRouteRacingManager.Instance.inRace)
 		{
 			flag = true;

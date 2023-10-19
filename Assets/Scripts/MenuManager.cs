@@ -131,8 +131,15 @@ public class MenuManager : MonoBehaviour
 		{
 			this.LoadSpecificGameSettings(null, false);
 		}
-		
-		if(Time.time > 10) 	Advertisements.Instance.ShowInterstitial();
+
+		if (PlayerPrefs.GetInt("Tutorial", 0).Equals(0))
+		{
+			PlayerPrefs.SetInt("Tutorial",1);
+		}
+		else
+		{
+			Advertisements.Instance.ShowInterstitial();	
+		}
 	}
 
 	private void LoadSpecificGameSettings(Action callback, bool showErrorMessage)

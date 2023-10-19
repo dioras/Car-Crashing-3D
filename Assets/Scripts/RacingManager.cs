@@ -171,6 +171,7 @@ public class RacingManager : MonoBehaviour
 		this.carUIControl.HideEventLobby();
 		this.carUIControl.HideShowRaceUI(true, true);
 		this.carUIControl.UpdateWinchUsedText(this.WinchUsedTimes);
+		if (IsTutorial()) ActiveRoute = AllRoutes[0];
 		this.carUIControl.UpdateLapText(this.CurrentLap, this.ActiveRoute.LapsNumber);
 		this.carUIControl.CurrentCheckpoint = this.ActiveRoute.SpawnedCheckpoints[0].transform;
 		this.carController.m_Rigidbody.velocity = Vector3.zero;
@@ -197,9 +198,23 @@ public class RacingManager : MonoBehaviour
 		this.InRace = false;
 		this.HideShowEventMarks(true);
 	}
-
+	private bool IsTutorial ()=> PlayerPrefs.GetInt("Tutorial", 0).Equals(0);
 	public void Continue()
 	{
+		if (IsTutorial())
+		{
+			PlayerPrefs.DeleteKey("Stats");
+			PlayerPrefs.DeleteKey("Opened");
+			PlayerPrefs.DeleteKey("Vehicle_LlrwE");
+			PlayerPrefs.DeleteKey("VehiclesList");
+			PlayerPrefs.DeleteKey("Opened");
+			PlayerPrefs.DeleteKey("GeneratedName");
+			PlayerPrefs.DeleteKey("SH");
+			PlayerPrefs.DeleteKey("useFBName");
+			PlayerPrefs.Save();
+			SceneManager.LoadScene("Menu");
+			return;
+		}
 		this.carController.vehicleIsActive = true;
 		this.carUIControl.FinishInfo.SetActive(false);
 		this.carUIControl.HideShowRaceUI(false, false);
@@ -224,8 +239,15 @@ public class RacingManager : MonoBehaviour
 		this.carController.vehicleIsActive = false;
 		for (int c = 3; c > 0; c--)
 		{
-			this.carUIControl.ShowCountdownText(c);
-			yield return new WaitForSeconds(1f);
+			if (PlayerPrefs.GetInt("Tutorial", 0).Equals(0))
+			{
+				yield return null;
+			}
+			else
+			{
+				this.carUIControl.ShowCountdownText(c);
+				yield return new WaitForSeconds(1f);
+			}
 		}
 		this.carUIControl.HideShowCountdown(false);
 		this.carController.vehicleIsActive = true;
@@ -311,6 +333,7 @@ public class RacingManager : MonoBehaviour
 					route = list[i];
 				}
 			}
+			
 			if (route != this.CurrentLobbyRoute)
 			{
 				this.ShowingEventLobby = true;
@@ -455,7 +478,7 @@ public class RacingManager : MonoBehaviour
 
 	public Route ActiveRoute;
 
-	private List<Route> AllRoutes = new List<Route>();
+	public List<Route> AllRoutes = new List<Route>();
 
 	private int CurrentCheckpoint;
 
