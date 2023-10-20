@@ -190,6 +190,7 @@ public class CarUIControl : MonoBehaviour
 	private IEnumerator StartTrail()
 	{
 		yield return new WaitForSeconds(0);
+		fuelAmountCurrent = 9999;
 		GameAnalytics.NewProgressionEvent (GAProgressionStatus.Start, "Tutorial", "Garage", "BuyCar");
 		StartRace();
 	}
