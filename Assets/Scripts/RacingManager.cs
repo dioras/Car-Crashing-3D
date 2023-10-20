@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CustomVP;
+using GameAnalyticsSDK;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -212,6 +213,7 @@ public class RacingManager : MonoBehaviour
 			PlayerPrefs.DeleteKey("SH");
 			PlayerPrefs.DeleteKey("useFBName");
 			PlayerPrefs.Save();
+			GameAnalytics.NewProgressionEvent (GAProgressionStatus.Complete, "Tutorial", "Garage", "BuyCar");
 			SceneManager.LoadScene("Menu");
 			return;
 		}

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CustomVP;
+using UnityEditor;
 using UnityEngine;
 using UnityStandardAssets.ImageEffects;
 
@@ -83,6 +84,8 @@ public class SurfaceManager : MonoBehaviour
 		{
 			this.BlurScript.enabled = false;
 		}
+		
+		//CreateMudTerrains(mudStamps);
 	}
 
 	private void OnEnable()
@@ -313,11 +316,11 @@ public class SurfaceManager : MonoBehaviour
 
 	private void InitializeBaseTerrain()
 	{
-		SplatPrototype[] splatPrototypes = this.BaseTerrain.terrainData.splatPrototypes;
+		TerrainLayer[] splatPrototypes = this.BaseTerrain.terrainData.terrainLayers;
 		this.terrainTextures = new Texture2D[splatPrototypes.Length];
 		for (int i = 0; i < this.terrainTextures.Length; i++)
 		{
-			this.terrainTextures[i] = splatPrototypes[i].texture;
+			this.terrainTextures[i] = splatPrototypes[i].diffuseTexture;
 		}
 		this.hRes = this.BaseTerrain.terrainData.heightmapResolution;
 		this.aRes = this.BaseTerrain.terrainData.alphamapResolution;
@@ -574,7 +577,7 @@ public class SurfaceManager : MonoBehaviour
 			this.MudTerrains[num7].terrainData.SetHeights(0, 0, array2);
 			int num11 = num8 - 1;
 			this.MudTerrains[num7].terrainData.alphamapResolution = num11;
-			this.MudTerrains[num7].terrainData.splatPrototypes = this.BaseTerrain.terrainData.splatPrototypes;
+			this.MudTerrains[num7].terrainData.terrainLayers = this.BaseTerrain.terrainData.terrainLayers;
 			this.MudTerrains[num7].aRes = num11;
 			this.MudTerrains[num7].aRes = num11;
 			float[,,] array3 = new float[num11, num11, this.terrainTextures.Length];
@@ -589,7 +592,7 @@ public class SurfaceManager : MonoBehaviour
 				num13 = this.BaseTerrain.terrainData.alphamapWidth - list2[num7].yMin;
 			}
 			float[,,] alphamaps = this.BaseTerrain.terrainData.GetAlphamaps(list2[num7].xMin, list2[num7].yMin, num12, num13);
-			List<SplatPrototype> list5 = new List<SplatPrototype>();
+			List<TerrainLayer> list5 = new List<TerrainLayer>();
 			List<int> list6 = new List<int>();
 			for (int num14 = 0; num14 < num11; num14++)
 			{
@@ -610,29 +613,30 @@ public class SurfaceManager : MonoBehaviour
 					}
 				}
 			}
+
 			this.MudTerrains[num7].terrainData.SetAlphamaps(0, 0, array3);
 			foreach (int num19 in list6)
 			{
-				list5.Add(this.BaseTerrain.terrainData.splatPrototypes[num19]);
+				list5.Add(this.BaseTerrain.terrainData.terrainLayers[num19]);
 			}
 			this.MudTerrains[num7].textures = new Texture2D[list5.Count];
 			for (int num20 = 0; num20 < list5.Count; num20++)
 			{
-				this.MudTerrains[num7].textures[num20] = list5[num20].texture;
+				this.MudTerrains[num7].textures[num20] = list5[num20].diffuseTexture;
 			}
-			this.MudTerrains[num7].terrainData.splatPrototypes = list5.ToArray();
+			this.MudTerrains[num7].terrainData.terrainLayers = list5.ToArray();
 			List<Vector2> list7 = new List<Vector2>();
-			for (int num21 = 0; num21 < this.BaseTerrain.terrainData.splatPrototypes.Length; num21++)
+			for (int num21 = 0; num21 < this.BaseTerrain.terrainData.terrainLayers.Length; num21++)
 			{
 				for (int num22 = 0; num22 < list5.Count; num22++)
 				{
-					if (this.BaseTerrain.terrainData.splatPrototypes[num21].texture.Equals(list5[num22].texture))
+					if (this.BaseTerrain.terrainData.terrainLayers[num21].diffuseTexture.Equals(list5[num22].diffuseTexture))
 					{
 						list7.Add(new Vector2((float)num21, (float)num22));
 					}
 				}
 			}
-			float[,,] array4 = new float[num11, num11, list7.Count];
+			float[,,] array4 = new float[num11, num11, list7.Count-1];
 			for (int num23 = 0; num23 < num11; num23++)
 			{
 				for (int num24 = 0; num24 < num11; num24++)
@@ -703,6 +707,15 @@ public class SurfaceManager : MonoBehaviour
 				this.CreateMudWaterMesh(this.MudTerrains[num30].terrain);
 			}
 		}
+		
+#if UNITY_EDITOR
+
+		//AssetDatabase.CreateAsset(BaseTerrain.terrainData, "Assets/TerrainNew/baseTerrain2010.asset");
+		AssetDatabase.CreateAsset(MudTerrains[0].terrain.terrainData, "Assets/TerrainNew/mudTerrain2010.asset");
+		AssetDatabase.CreateAsset(MudTerrains[0].GetComponentInChildren<MeshFilter>().mesh, "Assets/TerrainNew/mudWaterMesh2010.asset");
+		AssetDatabase.SaveAssets();
+#endif
+
 	}
 
 	private bool DoesPointBelongToMudStamp(MudStamp mudStamp, Vector3 point)
@@ -1307,6 +1320,7 @@ public class SurfaceManager : MonoBehaviour
 	private float DrynessSpeed = 0.05f;
 
 	private float WetnessSpeed = 0.1f;
+	public List<MudStamp> mudStamps;
 
 	[Header("Deformation")]
 	public int PushDiameter = 4;

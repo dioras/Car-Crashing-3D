@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CustomVP;
+using GameAnalyticsSDK;
 using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using UnityEngine;
@@ -189,6 +190,7 @@ public class CarUIControl : MonoBehaviour
 	private IEnumerator StartTrail()
 	{
 		yield return new WaitForSeconds(0);
+		GameAnalytics.NewProgressionEvent (GAProgressionStatus.Start, "Tutorial", "Garage", "BuyCar");
 		StartRace();
 	}
 
