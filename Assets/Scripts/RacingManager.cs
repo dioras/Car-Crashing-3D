@@ -213,7 +213,6 @@ public class RacingManager : MonoBehaviour
 			PlayerPrefs.DeleteKey("SH");
 			PlayerPrefs.DeleteKey("useFBName");
 			PlayerPrefs.Save();
-			GameAnalytics.NewProgressionEvent (GAProgressionStatus.Complete, "Tutorial", "Garage", "BuyCar");
 			SceneManager.LoadScene("Menu");
 			return;
 		}

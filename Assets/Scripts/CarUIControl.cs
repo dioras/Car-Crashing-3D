@@ -189,9 +189,9 @@ public class CarUIControl : MonoBehaviour
 	private bool IsTutorial() => PlayerPrefs.GetInt("Tutorial", 0).Equals(0);
 	private IEnumerator StartTrail()
 	{
+		GameAnalytics.NewProgressionEvent (GAProgressionStatus.Start, "Tutorial", "BuyCar", "LevelFinish");
 		yield return new WaitForSeconds(0);
 		fuelAmountCurrent = 9999;
-		GameAnalytics.NewProgressionEvent (GAProgressionStatus.Start, "Tutorial", "Garage", "BuyCar");
 		StartRace();
 	}
 
@@ -890,6 +890,12 @@ public class CarUIControl : MonoBehaviour
 		if (exiting)
 		{
 			AudioListener.volume = 0f;
+			if (PlayerPrefs.GetInt("FirstTime", 0).Equals(0))
+			{
+				GameAnalytics.NewProgressionEvent (GAProgressionStatus.Complete, "Tutorial", "BuyCar", "LevelFinish");
+				PlayerPrefs.SetInt("FirstTime", 1);
+			}
+			
 		}
 		else if (DataStore.GetInt("GameSound", 1) == 1)
 		{
@@ -904,10 +910,6 @@ public class CarUIControl : MonoBehaviour
 		if (this.racingManager != null)
 		{
 			this.racingManager.SaveVehicleData();
-		}
-		if (exiting)
-		{
-			//SceneManager.LoadScene("Menu");
 		}
 	}
 

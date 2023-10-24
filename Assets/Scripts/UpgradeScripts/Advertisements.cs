@@ -13,7 +13,7 @@ public class Advertisements : MonoBehaviour
 	private void Awake() {
 		if (Instance == null) {
 			Instance = this;
-			IronSource.Agent.setMetaData("is_test_suite", "enable");
+			//IronSource.Agent.setMetaData("is_test_suite", "enable");
 			
 			DontDestroyOnLoad(gameObject);
 		} else {
@@ -134,7 +134,7 @@ public class Advertisements : MonoBehaviour
 
 	private void OnSdkInitializationComplete() {
 		Debug.Log("OnSDKInitializationComplete");
-		IronSource.Agent.launchTestSuite();
+		//IronSource.Agent.launchTestSuite();
 		IronSource.Agent.loadInterstitial();
 	}
 }
