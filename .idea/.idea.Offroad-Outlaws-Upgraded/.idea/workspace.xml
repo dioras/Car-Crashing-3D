@@ -5,264 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81dfcfc6-4007-4218-82d1-b36c0a98d899" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/Editor/AdjustPivot.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/Editor/AdjustPivot.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/Editor/AdjustPivot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/Editor/AdjustPivot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AdjustPivot/README.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android/DebugLogLogcatListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android/DebugLogLogcatListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android/IngameDebugConsole.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android/IngameDebugConsole.aar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/DebugLogManagerEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/DebugLogManagerEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/IngameDebugConsole.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/IngameDebugConsole.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.Runtime.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.Runtime.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/CommandSuggestion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/CommandSuggestion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/DebugLogItem.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/DebugLogItem.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/README.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/CircularBuffer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/CircularBuffer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Commands.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Commands/PlayerPrefsCommands.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Commands/PlayerPrefsCommands.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Commands/SceneCommands.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Commands/SceneCommands.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Commands/TimeCommands.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Commands/TimeCommands.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/ConsoleMethodAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/ConsoleMethodAttribute.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogConsole.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogConsole.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogEntry.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogEntry.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogIndexList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogIndexList.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItemCopyWebGL.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItemCopyWebGL.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogPopup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogPopup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogRecycledListView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogRecycledListView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogResizeListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogResizeListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugsOnScrollListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugsOnScrollListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/EventSystemHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/EventSystemHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconClear.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconClear.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconCollapse.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconCollapse.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconError.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconError.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconHide.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconHide.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconInfo.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconInfo.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconResizeAllDirections.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconResizeAllDirections.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconResizeVertialOnly.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconResizeVertialOnly.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconSnapToBottom.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconSnapToBottom.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconSnapToBottomBg.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconSnapToBottomBg.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconWarning.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconWarning.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IngameDebugConsoleSpriteAtlas.spriteatlas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IngameDebugConsoleSpriteAtlas.spriteatlas.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SearchIcon.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SearchIcon.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground2.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground2.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground3.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground3.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconErrorHighRes.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconErrorHighRes.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconInfoHighRes.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconInfoHighRes.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconWarningHighRes.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconWarningHighRes.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/WebGL.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/WebGL/IngameDebugConsole.jslib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/WebGL/IngameDebugConsole.jslib.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/iOS.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/iOS/IngameDebugConsole.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/iOS/IngameDebugConsole.mm.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Upgraded/Fences.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Upgraded/Fences.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Upgraded/Mud.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Upgraded/Mud.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Upgraded/MudTerrain0.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Upgraded/MudTerrain0.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Publish/Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/Tutorial/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Publish/Tutorial/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/Advertisements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpgradeScripts/Advertisements.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Desert.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Desert.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/DesertMud0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/DesertMud0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/DesertMud1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/DesertMud1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/LevelEditor.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/LevelEditor.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/New Terrain 5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/New Terrain 5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockPark.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockPark.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockParkMud0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockParkMud0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockParkMud1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockParkMud1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockParkMud2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockParkMud2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockParkMud4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/RockParkMud4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/StuntTerrain 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/StuntTerrain 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/StuntTerrain.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/StuntTerrain.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrainData_27494fe5-72cc-43a9-b8b3-88df169bc92a.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrainData_27494fe5-72cc-43a9-b8b3-88df169bc92a.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrainData_2c66b3dd-e127-44b1-8304-09e50f7475bd.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrainData_2c66b3dd-e127-44b1-8304-09e50f7475bd.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrainData_71b73e41-82fb-40ff-bd6c-f26c57a84401.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrainData_71b73e41-82fb-40ff-bd6c-f26c57a84401.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrainTutorial.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TerrainTutorial.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_0_80be7ca0-5793-4a7e-85ce-99342a606203.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_0_80be7ca0-5793-4a7e-85ce-99342a606203.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_0_b00b321b-f399-4ed9-93bb-be6927bc613c.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_0_b00b321b-f399-4ed9-93bb-be6927bc613c.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_0_bb683dfa-875f-4d3f-b389-df1a525c591c.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_0_bb683dfa-875f-4d3f-b389-df1a525c591c.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_1_0d2a8931-7918-4d2d-8ee7-6bcea8b8ceb1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_1_0d2a8931-7918-4d2d-8ee7-6bcea8b8ceb1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_1_430e6367-477d-4395-8aef-78b86787b0fc.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_1_430e6367-477d-4395-8aef-78b86787b0fc.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_1_ae5d378b-907b-4899-b2a2-faa952866033.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_1_ae5d378b-907b-4899-b2a2-faa952866033.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_2_25fbffa1-ad91-4ee9-b5db-7087ee029b9d.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_2_25fbffa1-ad91-4ee9-b5db-7087ee029b9d.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_3_11f58588-fc35-4128-b313-30583fd10d54.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_0_3_11f58588-fc35-4128-b313-30583fd10d54.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_0_11ba01a8-6798-4ccb-9495-7b12899c588a.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_0_11ba01a8-6798-4ccb-9495-7b12899c588a.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_0_9a33aed0-3a4c-420e-b0e4-e39d3f8e1951.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_0_9a33aed0-3a4c-420e-b0e4-e39d3f8e1951.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_0_c36c4f85-860f-4a30-b0be-0db073617853.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_0_c36c4f85-860f-4a30-b0be-0db073617853.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_1_098ef427-78d4-404e-b733-454187fe9800.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_1_098ef427-78d4-404e-b733-454187fe9800.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_1_1719b900-415d-4cdd-9d02-0c4505c47e4b.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_1_1719b900-415d-4cdd-9d02-0c4505c47e4b.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_1_68cc6276-53bd-4107-bfff-162204c17001.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_1_68cc6276-53bd-4107-bfff-162204c17001.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_2_8ed602d2-808e-41c7-9f3f-aa4f02d0fb34.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_2_8ed602d2-808e-41c7-9f3f-aa4f02d0fb34.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_3_0b4f7e8a-396c-4a5e-a841-a0ba0ca4e897.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_1_3_0b4f7e8a-396c-4a5e-a841-a0ba0ca4e897.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_2_0_0028c42e-b7bc-4b74-aacb-20a38f987869.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_2_0_0028c42e-b7bc-4b74-aacb-20a38f987869.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_2_1_fba71c28-45c7-4793-a4f2-123dff698048.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_2_1_fba71c28-45c7-4793-a4f2-123dff698048.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_2_2_2ef518cc-c50c-47b8-a7ca-bb2ee808fc28.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_2_2_2ef518cc-c50c-47b8-a7ca-bb2ee808fc28.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_2_3_eed9f35e-b768-4e5e-adae-f0b8225e428e.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_2_3_eed9f35e-b768-4e5e-adae-f0b8225e428e.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_3_0_d47a4213-2564-47d6-926c-71d5220b8bed.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_3_0_d47a4213-2564-47d6-926c-71d5220b8bed.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_3_1_ead90af2-a17f-4c96-b832-348520017adc.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_3_1_ead90af2-a17f-4c96-b832-348520017adc.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_3_2_c71b75a0-0b8f-4ae8-8546-a0cc411a24f2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_3_2_c71b75a0-0b8f-4ae8-8546-a0cc411a24f2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_3_3_516f0bd6-d1aa-4e23-9a28-f8f2a378abcd.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Terrain_3_3_516f0bd6-d1aa-4e23-9a28-f8f2a378abcd.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TestTerrain0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TestTerrain0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TestTerrain1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TestTerrain1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TestTerrain2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/TestTerrain2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Woodlands 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Woodlands 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Woodlands.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/Woodlands.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud10.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud10.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud11.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud11.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud12.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud12.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud13.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud13.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud14.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud14.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud6.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud6.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud7.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud7.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud8.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud8.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud9 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud9 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud9.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Terrain/WoodlandsMud9.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainNew/TutorialTerrainFirst.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainNew/TutorialTerrainFirst.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainNew/mudTerrain2010.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainNew/mudTerrain2010.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainNew/mudTerrainTutorial.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainNew/mudTerrainTutorial.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Gauges_Fueled-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Gauges_Fueled-2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screenshot 2023-09-19 at 18.05.22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screenshot 2023-09-19 at 18.05.22.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screenshot 2023-09-28 at 17.47.06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Screenshot 2023-09-28 at 17.47.06.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/SplashScreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/SplashScreen.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/backround loading.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/backround loading.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/bgr ads.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/bgr ads.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/garage splash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/garage splash.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/logo blend color.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/logo blend color.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/logo blend not loaded.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/logo blend not loaded.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Offroad-Outlaws-Upgraded/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Offroad-Outlaws-Upgraded/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameAnalytics/Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GameAnalytics/Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/IAPProductCatalog.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/IAPProductCatalog.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/IAPProductCatalog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/IAPProductCatalog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarUIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CarUIControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadMainScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadMainScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoreListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoreListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/google-services-desktop.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/google-services-desktop.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/google-services-desktop.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/google-services-desktop.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -299,32 +53,32 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortKey" value="BY_TIME_DESCENDING" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Notification.DisplayName-DoNotAsk-Unity project open": "Unity project open",
-    "Notification.DoNotAsk-Unity project open": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "do_not_show_Android_plugin_suggestion": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Unity project open&quot;: &quot;Unity project open&quot;,
+    &quot;Notification.DoNotAsk-Unity project open&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;do_not_show_Android_plugin_suggestion&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/eren/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/Users/eren/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/Users/eren/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/eren/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/eren/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
+      &quot;/Users/eren/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.10f1/Unity.app/Contents/MacOS/Unity" />

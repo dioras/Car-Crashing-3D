@@ -7,29 +7,39 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:769395282491:ios:07aacf23d3d581445c821e",
+        "mobilesdk_app_id": "1:769395282491:android:71466c1271c4b8815c821e",
         "android_client_info": {
           "package_name": "com.carcrash.CarCrashingGames"
         }
       },
+      "oauth_client": [
+        {
+          "client_id": "769395282491-3u2cqtdrp0r85v4a9i1vi5nmfoj6q7ig.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyB3QaFyum-MI_k2QjttKvR2ibN9xpjtMlk"
+          "current_key": "AIzaSyDdqVeIxRTaZaIyJALPwirP3s7TBWXIHi8"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 0
-        },
         "appinvite_service": {
-          "status": 1
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769395282491-3u2cqtdrp0r85v4a9i1vi5nmfoj6q7ig.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "769395282491-iudviefjnenr4u8pqjdnpcdomvtfhprl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.carcrash.CarCrashingGames"
+              }
+            }
+          ]
         }
-      },
-      "oauth_client": [
-        {
-          "client_id": "769395282491-iudviefjnenr4u8pqjdnpcdomvtfhprl.apps.googleusercontent.com"
-        }
-      ]
+      }
     }
   ],
   "configuration_version": "1"

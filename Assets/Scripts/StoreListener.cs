@@ -94,7 +94,7 @@ public class StoreListener : IStoreListener
 			bool flag2 = false;
 			bool flag3 = false;
 			
-			if (purchaseEvent.purchasedProduct.definition.id == "com.carcrash.carcrashinggames.monthlyvip" && statsData.IsMember)
+			if (purchaseEvent.purchasedProduct.definition.id == "com.carcrash.carcrashinggames.monthly" && statsData.IsMember)
 			{
 				statsData.IsMember = true;
 				GameState.SaveStatsData(statsData);

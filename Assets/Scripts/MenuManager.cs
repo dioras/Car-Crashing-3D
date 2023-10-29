@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CustomVP;
 using Facebook.Unity;
+using GameAnalyticsSDK;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
@@ -705,6 +706,7 @@ public class MenuManager : MonoBehaviour
 	public void LoadVehicleTypeSelector(bool FromMainMenu)
 	{
 		this.LoadMenu(MenuState.TruckTypeSelector, true, FromMainMenu);
+		GameAnalytics.NewProgressionEvent (GAProgressionStatus.Start, "BuyCar");
 	}
 
 	public void LoadVehicleSelector(bool FromMainMenu)
@@ -960,6 +962,12 @@ public class MenuManager : MonoBehaviour
 			this.BuyMap("RockParkNG");
 			return;
 		}
+
+		if (sceneName == "MapWoodlandsV2NG")
+		{
+			GameAnalytics.NewProgressionEvent (GAProgressionStatus.Start, "Level_WoodLands");	
+		}
+		
 		this.SceneLoadingText.text = "Loading trailer...";
 		this.SceneLoading.GetComponent<LoadMainScene>().sceneToLoad = sceneName;
 		this.SceneLoading.SetActive(true);
@@ -4362,6 +4370,7 @@ public class MenuManager : MonoBehaviour
 			this.LoadMenu(MenuState.MainMenu, true, false);
 			this.SelectedVehicleInGarageID = 0;
 			GameState.SelectedGarageVehicleID = this.SelectedVehicleInGarageID;
+			GameAnalytics.NewProgressionEvent (GAProgressionStatus.Complete, "BuyCar");
 		}
 		else if (currency == global::Currency.Money && Utility.CashToGold(num) <= GameState.LoadStatsData().Gold)
 		{
