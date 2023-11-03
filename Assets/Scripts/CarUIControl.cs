@@ -168,7 +168,9 @@ public class CarUIControl : MonoBehaviour
 			this.DirectionalArrowsPool[k].gameObject.SetActive(false);
 		}
 		
-		if(!IsTutorial()) Advertisements.Instance.ShowInterstitial();
+		//if(!IsTutorial()) 
+		
+		Advertisements.Instance.ShowInterstitial();
 
 		if (storeListener == null)
 		{
@@ -183,13 +185,14 @@ public class CarUIControl : MonoBehaviour
 		var statsData = GameState.LoadStatsData();
 		hasUnlimitedFuel = statsData.HasUnlimitedFuel;
 		
-		if(IsTutorial()) StartCoroutine(StartTrail());
+		//if(IsTutorial()) 
+		//StartCoroutine(StartTrail());
 	}
 
-	private bool IsTutorial() => PlayerPrefs.GetInt("Tutorial", 0).Equals(0);
+	//private bool IsTutorial() => PlayerPrefs.GetInt("Tutorial", 0).Equals(0);
 	private IEnumerator StartTrail()
 	{
-		GameAnalytics.NewProgressionEvent (GAProgressionStatus.Start, "Tutorial");
+		//GameAnalytics.NewProgressionEvent (GAProgressionStatus.Start, "Tutorial");
 		yield return new WaitForSeconds(0);
 		fuelAmountCurrent = 9999;
 		StartRace();

@@ -133,14 +133,16 @@ public class MenuManager : MonoBehaviour
 			this.LoadSpecificGameSettings(null, false);
 		}
 
-		if (PlayerPrefs.GetInt("Tutorial", 0).Equals(0))
-		{
-			PlayerPrefs.SetInt("Tutorial",1);
-		}
-		else
-		{
-			Advertisements.Instance.ShowInterstitial();	
-		}
+		// if (PlayerPrefs.GetInt("Tutorial", 0).Equals(0))
+		// {
+		// 	PlayerPrefs.SetInt("Tutorial",1);
+		// }
+		// else
+		// {
+		// 	Advertisements.Instance.ShowInterstitial();	
+		// }
+
+		if(Time.time > 10) Advertisements.Instance.ShowInterstitial();	
 	}
 
 	private void LoadSpecificGameSettings(Action callback, bool showErrorMessage)
@@ -4370,7 +4372,7 @@ public class MenuManager : MonoBehaviour
 			this.LoadMenu(MenuState.MainMenu, true, false);
 			this.SelectedVehicleInGarageID = 0;
 			GameState.SelectedGarageVehicleID = this.SelectedVehicleInGarageID;
-			GameAnalytics.NewProgressionEvent (GAProgressionStatus.Complete, "BuyCar");
+			//GameAnalytics.NewProgressionEvent (GAProgressionStatus.Complete, "BuyCar");
 		}
 		else if (currency == global::Currency.Money && Utility.CashToGold(num) <= GameState.LoadStatsData().Gold)
 		{
