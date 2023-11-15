@@ -902,7 +902,7 @@ namespace CustomVP
 			this.LeveledMaxSpeed = this.BaseMaxSpeed * num3 / 100f * (100f + this.FinalTorquePercentage * num4 * num5);
 			if (this.tankController == null)
 			{
-				this.engine.TopGear = 9f - 4f * ((num6 - 80f) / 280f);
+				//this.engine.TopGear = 9f - 4f * ((num6 - 80f) / 280f);
 			}
 			else
 			{

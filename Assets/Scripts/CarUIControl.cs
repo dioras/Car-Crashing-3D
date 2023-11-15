@@ -187,6 +187,8 @@ public class CarUIControl : MonoBehaviour
 		
 		//if(IsTutorial()) 
 		//StartCoroutine(StartTrail());
+
+		ToggleGauge();
 	}
 
 	//private bool IsTutorial() => PlayerPrefs.GetInt("Tutorial", 0).Equals(0);

@@ -135,7 +135,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 2.1.1
+  bundleVersion: 2.1.2
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -164,7 +164,7 @@ PlayerSettings:
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 20
+  AndroidBundleVersionCode: 21
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 33
   AndroidPreferredInstallLocation: 1
@@ -258,7 +258,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: /Users/eren/Documents/Unity/user (2) (1).keystore
+  AndroidKeystoreName: '{dedicated}: Downloads/user (2) (1).keystore'
   AndroidKeyaliasName: release
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0
@@ -796,21 +796,23 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: UNITY_POST_PROCESSING_STACK_V2;USE_ADMOB;USE_ADMOB_PATCH;USE_IRONSOURCE;gameanalytics_ironsource_enabled;gameanalytics_admob_enabled
-    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2
-    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2
-    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2
-    PS4: UNITY_POST_PROCESSING_STACK_V2
-    PS5: UNITY_POST_PROCESSING_STACK_V2
-    QNX: UNITY_POST_PROCESSING_STACK_V2
-    Stadia: UNITY_POST_PROCESSING_STACK_V2
-    Standalone: UNITY_POST_PROCESSING_STACK_V2
-    VisionOS: UNITY_POST_PROCESSING_STACK_V2
-    WebGL: UNITY_POST_PROCESSING_STACK_V2
-    Windows Store Apps: 
-    XboxOne: UNITY_POST_PROCESSING_STACK_V2
-    iPhone: USE_ADMOB_PATCH;gameanalytics_ironsource_enabled;gameanalytics_admob_enabled
-    tvOS: UNITY_POST_PROCESSING_STACK_V2
+    Android: UNITY_POST_PROCESSING_STACK_V2;USE_ADMOB;USE_ADMOB_PATCH;USE_IRONSOURCE;gameanalytics_ironsource_enabled;gameanalytics_admob_enabled;BCG_RMD
+    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    GameCoreScarlett: BCG_RMD
+    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    LinuxHeadlessSimulation: BCG_RMD
+    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    PS4: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    PS5: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    QNX: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    Stadia: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    VisionOS: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    WebGL: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    Windows Store Apps: BCG_RMD
+    XboxOne: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
+    iPhone: USE_ADMOB_PATCH;gameanalytics_ironsource_enabled;gameanalytics_admob_enabled;BCG_RMD
+    tvOS: UNITY_POST_PROCESSING_STACK_V2;BCG_RMD
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
